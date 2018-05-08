@@ -1,0 +1,34 @@
+    Decisoes de projeto
+
+    Ranking (ELO: wikipedia)
+|Jogo 1 v| (dropdown)
+[icone do main] Nome 1 | ELO 1
+[icone do main] Nome 2 | ELO 2
+...
+Os X primeiros players (X=100?)
+
+    Tela principal (show)
+-Nome
+-ELO
+-Mains
+
+    Tela principal (edit)
+-Nome
+-ELO
+-Mains (dropdown por jogo)
+
+
+
+    Models:
+-Usuario:
+Username 
+email
+Senha
+ELO
+Mains
+
+-Partidas:
+Jogador 1(fk)
+Jogador 2(fk)
+Vitorias jogador 1
+Vitorias jogador 2

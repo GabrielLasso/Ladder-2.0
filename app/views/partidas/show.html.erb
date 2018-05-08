@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Player1:</strong>
+  <%= @partida.player1 %>
+</p>
+
+<p>
+  <strong>Player2:</strong>
+  <%= @partida.player2 %>
+</p>
+
+<p>
+  <strong>Winp1:</strong>
+  <%= @partida.winP1 %>
+</p>
+
+<p>
+  <strong>Winp2:</strong>
+  <%= @partida.winP2 %>
+</p>
+
+<%= link_to 'Edit', edit_partida_path(@partida) %> |
+<%= link_to 'Back', partidas_path %>
