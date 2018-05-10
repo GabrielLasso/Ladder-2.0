@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   def initialize(param)
       super(param)
-      self.elo = 100;
+      self.elo_pm = 100;
+      self.elo_melee = 100;
+      self.elo_undernight = 100;
   end
 end

@@ -3,7 +3,6 @@
   <head>
     <title>Ladder</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,8 +11,22 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
-
+    <% if user_signed_in? %>
+        <p> Olá <%=current_user.username %></p>
+        <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
+    <% end %>
+    <div class="left-sidebar">
+        <h3>Ranking</h3>
+        <select>
+            <option value="PM">Project M</option>
+            <option value="Melee">Melee</option>
+            <option value="Undernight">Undernight</option>
+        </select>
+        <% @users = User.all %>
+        <% @users.each do |u| %>
+            <p> <%= u.username %> </p>
+        <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
