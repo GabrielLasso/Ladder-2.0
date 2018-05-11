@@ -17,12 +17,23 @@
     <% end %>
     <div class="left-sidebar">
         <h3>Ranking</h3>
-        <select>
+        <select name="jogo" id="jogo">
             <option value="PM">Project M</option>
             <option value="Melee">Melee</option>
             <option value="Undernight">Undernight</option>
         </select>
-        <% @users = User.all %>
+        <h4>PM</h4>
+        <% @users = User.all.sort_by {|x| -x.elo_pm} %>
+        <% @users.each do |u| %>
+            <p> <%= u.username %> </p>
+        <% end %>
+        <h4>Milho</h4>
+        <% @users = User.all.sort_by {|x| -x.elo_melee} %>
+        <% @users.each do |u| %>
+            <p> <%= u.username %> </p>
+        <% end %>
+        <h4>UN</h4>
+        <% @users = User.all.sort_by {|x| -x.elo_undernight} %>
         <% @users.each do |u| %>
             <p> <%= u.username %> </p>
         <% end %>
