@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Player1_id:</strong>
-  <%= @partida.player1_id %>
+  <strong>Player1:</strong>
+  <% p1 = User.find(@partida.player1_id) %>
+  <%= p1.username %>
 </p>
 
 <p>
-<strong>Player2_id:</strong>
-  <%= @partida.player2_id %>
+<strong>Player2:</strong>
+  <% p1 = User.find(@partida.player2_id) %>
+  <%= p1.username %>
 </p>
 
 <p>

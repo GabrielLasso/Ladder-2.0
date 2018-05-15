@@ -24,7 +24,11 @@ class PartidasController < ApplicationController
   # POST /partidas
   # POST /partidas.json
   def create
-    @partida = Partida.new(partida_params)
+    p1 = User.where("username = ?", partida_params[:player1])[0]
+    p2 = User.where("username = ?", partida_params[:player2])[0]
+    winp1 = partida_params[:winP1]
+    winp2 = partida_params[:winP2]
+    @partida = Partida.new(player1: p1, player2: p2, winP1: winp1, winP2: winp2)
 
     respond_to do |format|
       if @partida.save
@@ -69,6 +73,6 @@ class PartidasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def partida_params
-      params.require(:partida).permit(:winP1, :winP2, :player1_id, :player2_id)
+      params.require(:partida).permit(:winP1, :winP2, :player1, :player2)
     end
 end
