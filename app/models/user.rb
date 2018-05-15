@@ -11,4 +11,7 @@ class User < ApplicationRecord
       self.elo_melee = 100;
       self.elo_undernight = 100;
   end
+  def to_s
+      return self.username
+  end
 end
