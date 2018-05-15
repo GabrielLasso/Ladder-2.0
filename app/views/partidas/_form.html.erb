@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :player1 %>
-    <%= form.text_field :player1, id: :partida_player1 %>
+    <%= form.text_field :player1, id: :partida_player1, value: current_user, readonly: true %>
   </div>
 
   <div class="field">

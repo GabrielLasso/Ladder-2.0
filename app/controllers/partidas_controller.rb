@@ -24,7 +24,7 @@ class PartidasController < ApplicationController
   # POST /partidas
   # POST /partidas.json
   def create
-    p1 = User.where("username = ?", partida_params[:player1])[0]
+    p1 = current_user
     p2 = User.where("username = ?", partida_params[:player2])[0]
     winp1 = partida_params[:winP1]
     winp2 = partida_params[:winP2]
@@ -73,6 +73,6 @@ class PartidasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def partida_params
-      params.require(:partida).permit(:winP1, :winP2, :player1, :player2)
+      params.require(:partida).permit(:winP1, :winP2, :player2)
     end
 end

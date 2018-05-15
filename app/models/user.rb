@@ -3,15 +3,17 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :partidas, class_name: "Partida"
   validates_uniqueness_of :username
   def initialize(param)
-      super(param)
-      self.elo_pm = 100;
-      self.elo_melee = 100;
-      self.elo_undernight = 100;
+    super(param)
+    self.elo_pm = 100;
+    self.elo_melee = 100;
+    self.elo_undernight = 100;
   end
   def to_s
-      return self.username
+    return self.username
+  end
+  def partidas
+      return Partida.where("player1_id = ? OR player2_id = ?", self.id, self.id)
   end
 end

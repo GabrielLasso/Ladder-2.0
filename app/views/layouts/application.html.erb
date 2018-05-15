@@ -14,6 +14,8 @@
     <% if user_signed_in? %>
         <p> Olá <%=current_user.username %></p>
         <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
+    <% else %>
+        <%= link_to "Entrar",new_user_session_path %>
     <% end %>
     <div class="left-sidebar">
         <h3>Ranking</h3>
@@ -23,23 +25,6 @@
             <option value="Undernight">Undernight</option>
         </select>
         <p id="teste"></p>
-
-
-        <!-- <h4>PM</h4>
-        <% @users = User.all.sort_by {|x| -x.elo_pm} %>
-        <% @users.each do |u| %>
-            <p> <%= u.username%> <%=u.elo_pm%> </p>
-        <% end %>
-        <h4>Milho</h4>
-        <% @users = User.all.sort_by {|x| -x.elo_melee} %>
-        <% @users.each do |u| %>
-            <p> <%= u.username%> <%=u.elo_melee%> </p>
-        <% end %>
-        <h4>UN</h4>
-        <% @users = User.all.sort_by {|x| -x.elo_undernight} %>
-        <% @users.each do |u| %>
-            <p> <%= u.username%> <%=u.elo_undernight%> </p>
-        <% end %> -->
     </div>
     <%= yield %>
   </body>

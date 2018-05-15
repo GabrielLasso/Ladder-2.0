@@ -19,7 +19,7 @@
         <% p1 = User.find(partida.player1_id) %>
         <td><%= p1.username %></td>
         <% p2 = User.find(partida.player2_id) %>
-        <td><%= p1.username %></td>
+        <td><%= p2.username %></td>
         <td><%= partida.winP1 %></td>
         <td><%= partida.winP2 %></td>
         <td><%= link_to 'Show', partida %></td>
