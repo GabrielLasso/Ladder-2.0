@@ -69,6 +69,6 @@ class PartidasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def partida_params
-      params.require(:partida).permit(:player1_id, :player2_id, :winP1, :winP2)
+      params.require(:partida).permit(:winP1, :winP2, :player1_id, :player2_id)
     end
 end

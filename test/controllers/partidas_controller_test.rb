@@ -17,7 +17,7 @@ class PartidasControllerTest < ActionDispatch::IntegrationTest
 
   test "should create partida" do
     assert_difference('Partida.count') do
-      post partidas_url, params: { partida: { player1_id: @partida.player1_id, player2_id: @partida.player2_id, winP1: @partida.winP1, winP2: @partida.winP2 } }
+      post partidas_url, params: { partida: { winP1: @partida.winP1, winP2: @partida.winP2 } }
     end
 
     assert_redirected_to partida_url(Partida.last)
@@ -34,7 +34,7 @@ class PartidasControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update partida" do
-    patch partida_url(@partida), params: { partida: { player1_id: @partida.player1_id, player2_id: @partida.player2_id, winP1: @partida.winP1, winP2: @partida.winP2 } }
+    patch partida_url(@partida), params: { partida: { winP1: @partida.winP1, winP2: @partida.winP2 } }
     assert_redirected_to partida_url(@partida)
   end
 

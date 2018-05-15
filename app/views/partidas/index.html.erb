@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>Player1</th>
-      <th>Player2</th>
+      <th>Player1_id</th>
+      <th>Player2_id</th>
       <th>Winp1</th>
       <th>Winp2</th>
       <th colspan="3"></th>
@@ -16,8 +16,8 @@
   <tbody>
     <% @partidas.each do |partida| %>
       <tr>
-        <td><%= partida.player1 %></td>
-        <td><%= partida.player2 %></td>
+        <td><%= partida.player1_id %></td>
+        <td><%= partida.player2_id %></td>
         <td><%= partida.winP1 %></td>
         <td><%= partida.winP2 %></td>
         <td><%= link_to 'Show', partida %></td>
