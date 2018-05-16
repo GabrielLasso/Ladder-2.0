@@ -21,17 +21,6 @@ ActiveRecord::Schema.define(version: 20180515161804) do
     t.integer "player2_id"
   end
 
-  create_table "player1s", force: :cascade do |t|
-    t.integer "player1_id"
-    t.integer "player2_id"
-    t.integer "winP1"
-    t.integer "winP2"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["player1_id"], name: "index_player1s_on_player1_id"
-    t.index ["player2_id"], name: "index_player1s_on_player2_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
