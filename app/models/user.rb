@@ -16,4 +16,14 @@ class User < ApplicationRecord
   def partidas
       return Partida.where("player1_id = ? OR player2_id = ?", self.id, self.id)
   end
+  def update_elo(game, new_elo)
+      case game
+      when 1
+          self.update_column(:elo_1, new_elo)
+      when 2
+          self.update_column(:elo_2, new_elo)
+      when 3
+          self.update_column(:elo_3, new_elo)
+      end
+  end
 end

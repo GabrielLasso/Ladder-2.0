@@ -39,6 +39,7 @@ class PartidasController < ApplicationController
 
     respond_to do |format|
       if @partida.save
+        @partida.update_elos
         format.html { redirect_to @partida, notice: 'Partida was successfully created.' }
         format.json { render :show, status: :created, location: @partida }
       else
