@@ -28,7 +28,14 @@ class PartidasController < ApplicationController
     p2 = User.where("username = ?", partida_params[:player2])[0]
     winp1 = partida_params[:winP1]
     winp2 = partida_params[:winP2]
-    @partida = Partida.new(player1: p1, player2: p2, winP1: winp1, winP2: winp2)
+    game = partida_params[:game]
+    puts partida_params
+    puts partida_params
+    puts partida_params
+    puts partida_params
+    puts partida_params
+    puts partida_params
+    @partida = Partida.new(player1: p1, player2: p2, winP1: winp1, winP2: winp2, game: game)
 
     respond_to do |format|
       if @partida.save
@@ -73,6 +80,6 @@ class PartidasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def partida_params
-      params.require(:partida).permit(:winP1, :winP2, :player2)
+      params.require(:partida).permit(:winP1, :winP2, :player2, :game)
     end
 end

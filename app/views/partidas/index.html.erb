@@ -9,6 +9,7 @@
       <th>Player2</th>
       <th>Winp1</th>
       <th>Winp2</th>
+      <th>Game</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,6 +23,17 @@
         <td><%= p2.username %></td>
         <td><%= partida.winP1 %></td>
         <td><%= partida.winP2 %></td>
+          <% g = partida.game %>
+          <% case g %>
+          <% when 1 %>
+            <td><%= $game1 %></td>
+          <% when 2 %>
+            <td><%= $game2 %></td>
+          <% when 3 %>
+            <td><%= $game3 %></td>
+          <% else %>
+            <td>----</td>
+          <% end %>
         <td><%= link_to 'Show', partida %></td>
         <td><%= link_to 'Edit', edit_partida_path(partida) %></td>
         <td><%= link_to 'Destroy', partida, method: :delete, data: { confirm: 'Are you sure?' } %></td>

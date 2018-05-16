@@ -1,6 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Game:</strong>
+  <% g = @partida.game %>
+  <% case g %>
+  <% when 1 %>
+  <%= $game1 %>
+  <% when 2 %>
+  <%= $game2 %>
+  <% when 3 %>
+  <%= $game3 %>
+  <% end %>
+</p>
+
+<p>
   <strong>Player1:</strong>
   <% p1 = User.find(@partida.player1_id) %>
   <%= p1.username %>

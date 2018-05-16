@@ -20,9 +20,9 @@
     <div class="left-sidebar">
         <h3>Ranking</h3>
         <select name="jogo" id="jogo" onchange="printRanks()">
-            <option value="PM">Project M</option>
-            <option value="Melee">Melee</option>
-            <option value="Undernight">Undernight</option>
+            <option value="1"><%= $game1 %></option>
+            <option value="2"><%= $game2 %></option>
+            <option value="3"><%= $game3 %></option>
         </select>
         <p id="teste"></p>
     </div>
@@ -35,17 +35,17 @@
 	function printRanks() {
 		var str="";
 		switch (aux.options[aux.selectedIndex].value) {
-			case "PM":
-				str = "<% @users = User.all.sort_by {|x| -x.elo_pm} %>"
-				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_pm%> </p><% end %>"
+			case "1":
+				str = "<% @users = User.all.sort_by {|x| -x.elo_1} %>"
+				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_1%> </p><% end %>"
 				break;
-			case "Melee":
-				str = "<% @users = User.all.sort_by {|x| -x.elo_melee} %>"
-				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_melee%> </p><% end %>"
+			case "2":
+				str = "<% @users = User.all.sort_by {|x| -x.elo_2} %>"
+				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_2%> </p><% end %>"
 				break;
-			case "Undernight":
-				str = "<% @users = User.all.sort_by {|x| -x.elo_undernight} %>"
-				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_undernight%> </p><% end %>"
+			case "3":
+				str = "<% @users = User.all.sort_by {|x| -x.elo_3} %>"
+				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_3%> </p><% end %>"
 				break;
 		}
 		document.getElementById("teste").innerHTML =  str;
