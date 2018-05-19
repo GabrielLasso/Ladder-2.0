@@ -19,10 +19,13 @@
     <% end %>
     <div class="left-sidebar">
         <h3>Ranking</h3>
-        <select name="jogo" id="jogo" onchange="printRanks()">
-            <option value="1"><%= $game1 %></option>
-            <option value="2"><%= $game2 %></option>
-            <option value="3"><%= $game3 %></option>
+        <% @jogos = Jogo.all%>
+        <select name="jogo" id="jogo" onchange="printRanks()">            
+            
+            <% @jogos.each do |u| %>
+                <option value= <%=u.valor%> > <%= u.nome%> </option>
+            <% end %>
+
         </select>
         <p id="teste"></p>
     </div>
