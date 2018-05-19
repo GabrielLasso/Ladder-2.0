@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Para rodar:
+$bundle install
+$rails db:migrate
+$rake db:seed
+mais alguma coisa que deve faltar
