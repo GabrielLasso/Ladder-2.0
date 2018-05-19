@@ -13,7 +13,20 @@
 
   <div class="field">
     <%= form.label :game %>
-    <%= select :partida, :game, options_for_select([[$game1, 1],[$game2, 2],[$game3, 3]]) %>
+
+   <!--  <select name="jogo" id="jogo" onchange="printRanks()">
+      <% Jogo.all.each do |u| %>
+        <option value= <%=u.valor%> > <%= u.nome%> </option>
+      <% end %>
+    </select> -->
+    <%
+      a = []
+      Jogo.all.each do |u|
+        a.push([u.nome, u.id])
+      end
+    %>
+
+    <%= select :partida, :game, options_for_select(a) %>
   </div>
 
   <div class="field">
