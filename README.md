@@ -1,30 +1,20 @@
-# README
+# Ladder IME-USP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A ideia do projeto é criar e gerenciar um ranking dos jogos de videogame mais jogados no IME
 
-Things you may want to cover:
+## Instalar e rodar
+> É necessário que haja uma instalação do Ruby 2.3.0, Rails 5.1 e Sqlite3 3.22
 
-* Ruby version
+Para preparar a aplicação:
+- $bundle install
+- $rails db:migrate
+- $rake db:seed
 
-* System dependencies
+Após isso é só rodar acessar como uma aplicação rails comum
 
-* Configuration
+## Grupo
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-Para rodar:
-$bundle install
-$rails db:migrate
-$rake db:seed
-mais alguma coisa que deve faltar
+- Arthur Vieira (@ArthurTui) - 6482041
+- Fabio Tanaka (@fhtanaka)- 9297982
+- Gabriel Lasso (@GabrielLasso)- 9298016
+- Mathias Menck (@mavsm)- 4343470
