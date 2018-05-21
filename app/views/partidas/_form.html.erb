@@ -13,12 +13,6 @@
 
   <div class="field">
     <%= form.label :game %>
-
-   <!--  <select name="jogo" id="jogo" onchange="printRanks()">
-      <% Jogo.all.each do |u| %>
-        <option value= <%=u.valor%> > <%= u.nome%> </option>
-      <% end %>
-    </select> -->
     <%
       a = []
       Jogo.all.each do |u|
@@ -31,13 +25,22 @@
 
   <div class="field">
     <%= form.label :player1 %>
-    <%= form.text_field :player1, id: :partida_player1, value: current_user, readonly: true %>
+    <input id="partida_player1" value=<%=current_user%> readonly="readonly"/>
   </div>
 
   <div class="field">
     <%= form.label :player2 %>
+    <%
+      a = []
+      User.all.each do |u|
+        a.push([u.username,u]) if u != current_user
+      end
+    %>
+    <%= select :partida, :player2, options_for_select(a) %>
+    <!--
     <%= form.text_field :player2, id: :partida_player2 %>
-  </div>
+    -->
+    </div>
 
   <div class="field">
     <%= form.label :winP1 %>
