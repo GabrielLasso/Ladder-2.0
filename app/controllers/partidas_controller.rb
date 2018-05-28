@@ -19,6 +19,9 @@ class PartidasController < ApplicationController
 
   # GET /partidas/1/edit
   def edit
+      if !current_user.admin?
+          redirect_to partidas_path
+      end
   end
 
   # POST /partidas
@@ -50,6 +53,10 @@ class PartidasController < ApplicationController
   # PATCH/PUT /partidas/1
   # PATCH/PUT /partidas/1.json
   def update
+      if !current_user.admin?
+          redirect_to partidas_path
+          return
+      else
     respond_to do |format|
       if @partida.update(partida_params)
         format.html { redirect_to @partida, notice: 'Partida was successfully updated.' }
@@ -60,15 +67,20 @@ class PartidasController < ApplicationController
       end
     end
   end
+  end
 
   # DELETE /partidas/1
   # DELETE /partidas/1.json
   def destroy
+      if !current_user.admin?
+          redirect_to partidas_path
+      else
     @partida.destroy
     respond_to do |format|
       format.html { redirect_to partidas_url, notice: 'Partida was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
   end
 
   private

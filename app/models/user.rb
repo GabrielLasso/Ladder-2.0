@@ -6,9 +6,10 @@ class User < ApplicationRecord
   validates_uniqueness_of :username
   def initialize(param)
     super(param)
-    self.elo_1 = 1200;
-    self.elo_2 = 1200;
-    self.elo_3 = 1200;
+    self.elo_1 = 1200
+    self.elo_2 = 1200
+    self.elo_3 = 1200
+    self.admin = false
   end
   def to_s
     return self.username
