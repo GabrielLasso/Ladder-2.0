@@ -37,3 +37,5 @@ User.create(
 for jogo in [["PM", 1], ["Melee", 2], ["UnderNight", 3]]
 	Jogo.create(nome: jogo[0], valor: jogo[1])
 end
+
+User.where("username = 'lasso'")[0].update_column(:admin, true)
