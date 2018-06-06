@@ -9,6 +9,7 @@ end
 class Partida < ApplicationRecord
     belongs_to :player1, class_name: "User"
     belongs_to :player2, class_name: "User"
+    validates :player1, :player2, :winP1, :winP2, :game, presence: true
     validates_with PartidaValidator
     after_save :update_elos
     def update_elos
