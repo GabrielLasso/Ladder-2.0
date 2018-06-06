@@ -1,6 +1,16 @@
+class PartidaValidator < ActiveModel::Validator
+    def validate (record)
+        unless (record.winP1 == 3 or record.winP2 == 3) and record.winP1 + record.winP2 <= 5
+            record.errors[:resultados] << ": Por favor, insira um resultado válido."
+        end
+    end
+end
+
 class Partida < ApplicationRecord
     belongs_to :player1, class_name: "User"
     belongs_to :player2, class_name: "User"
+    validates_with PartidaValidator
+    after_save :update_elos
     def update_elos
         case self.game
         when 1
