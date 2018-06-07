@@ -5,6 +5,7 @@ class User < ApplicationRecord
         :recoverable, :rememberable, :trackable, :validatable
     validates_uniqueness_of :username
     after_create :start_elo
+    has_and_belongs_to_many :personagem
     def initialize(param)
         super(param)
         self.admin = false
@@ -32,5 +33,14 @@ class User < ApplicationRecord
         query = Elo.where ("jogo_id = #{jogo} and user_id = #{self.id}")
         elo = query[0]
         elo.update_column(:elo, new_elo)
+    end
+    def mains
+        return self.personagem
+    end
+    def add_main (personagem)
+        self.personagem << personagem
+    end
+    def delete_main (personagem)
+        self.personagem.delete (personagem)
     end
 end

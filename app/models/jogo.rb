@@ -8,4 +8,7 @@ class Jogo < ApplicationRecord
         end
     }
   end
+  def to_s
+      return self.nome
+  end
 end
