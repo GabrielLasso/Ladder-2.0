@@ -5,9 +5,11 @@ one:
   winP2:        2
   player1_id:   1
   player2_id:   2
+  game:         1
 
 two:
   winP1:        2
   winP2:        3
   player1_id:   1
   player2_id:   2
+  game:         2

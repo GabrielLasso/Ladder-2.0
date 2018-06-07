@@ -1,60 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ladder</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <head>
+        <title>Ladder</title>
+        <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <body>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
 
-    <% if user_signed_in? %>
+        <% if user_signed_in? %>
         <p> Olá <%=current_user.username %></p>
         <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
-    <% else %>
+        <% else %>
         <%= link_to "Entrar",new_user_session_path %>
-    <% end %>
-    <div class="left-sidebar">
-        <h3>Ranking</h3>
-        <% @jogos = Jogo.all%>
-        <select name="jogo" id="jogo" onchange="printRanks()">            
-            
-            <% @jogos.each do |u| %>
-                <option value= <%=u.id%> > <%= u.nome%> </option>
-            <% end %>
+        <% end %>
+        <div class="left-sidebar">
+            <h3>Ranking</h3>
+            <% @jogos = Jogo.all%>
+            <select name="jogo" id="jogo" onchange="printRanks()">            
 
-        </select>
-        <p id="teste"></p>
-    </div>
-    <%= yield %>
-  </body>
+                <% @jogos.each do |u| %>
+                <option value= <%=u.id%> > <%= u.nome%> </option>
+                <% end %>
+
+            </select>
+            <p id="teste"></p>
+        </div>
+        <%= yield %>
+    </body>
 </html>
 <script type="text/javascript">
-	var aux = document.getElementById("jogo");
-	printRanks();
-	function printRanks() {
-		var str="";
-		switch (aux.options[aux.selectedIndex].value) {
-			case "1":
-				str = "<% @users = User.all.sort_by {|x| -x.elo_1} %>"
-				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_1%> </p><% end %>"
-				break;
-			case "2":
-				str = "<% @users = User.all.sort_by {|x| -x.elo_2} %>"
-				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_2%> </p><% end %>"
-				break;
-			case "3":
-				str = "<% @users = User.all.sort_by {|x| -x.elo_3} %>"
-				str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_3%> </p><% end %>"
-				break;
-		}
-		document.getElementById("teste").innerHTML =  str;
-	}
+    var aux = document.getElementById("jogo");
+printRanks();
+function printRanks() {
+    var str="";
+    switch (aux.options[aux.selectedIndex].value) {
+        case "1":
+            str = "<% @users = User.all.sort_by {|x| -x.elo_1} %>"
+            str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_1%> </p><% end %>"
+            break;
+        case "2":
+            str = "<% @users = User.all.sort_by {|x| -x.elo_2} %>"
+            str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_2%> </p><% end %>"
+            break;
+        case "3":
+            str = "<% @users = User.all.sort_by {|x| -x.elo_3} %>"
+            str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_3%> </p><% end %>"
+            break;
+    }
+    document.getElementById("teste").innerHTML =  str;
+}
 
-	
-	
-	
+
+
+
 </script>

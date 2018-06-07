@@ -1,10 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nome: PM
+    id: 1
+    nome: PM
 
 two:
-  nome: Melee
+    id: 2
+    nome: Melee
 
 three:
-  nome: Undernight
+    id: 3
+    nome: Undernight
