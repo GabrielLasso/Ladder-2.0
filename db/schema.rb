@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 20180528184749) do
 
   create_table "jogos", force: :cascade do |t|
     t.string "nome"
-    t.integer "valor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

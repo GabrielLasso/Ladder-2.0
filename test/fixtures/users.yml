@@ -4,14 +4,20 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-user1: 
+one: 
     id:         1
     username:   "Player1"
     email:      "player1@ladder.com"
     elo_1:      1200
+    elo_2:      1200
+    elo_3:      1200
+    admin:      false
 
-user2:
+two:
     id:         2
     username:   "Player2"
     email:      "player2@ladder.com"
     elo_1:      1200
+    elo_2:      1200
+    elo_3:      1200
+    admin:      false

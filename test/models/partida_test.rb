@@ -11,14 +11,12 @@ class PartidaTest < ActiveSupport::TestCase
         assert partida.save
     end
     test "Requer player 1" do
-        user1 = User.find(1)
         user2 = User.find(2)
         partida = Partida.new({player2: user2, game: 1, winP1: 3, winP2: 2})
         assert_not partida.save
     end
     test "Requer player 2" do
         user1 = User.find(1)
-        user2 = User.find(2)
         partida = Partida.new({player1: user1, game: 1, winP1: 3, winP2: 2})
         assert_not partida.save
     end

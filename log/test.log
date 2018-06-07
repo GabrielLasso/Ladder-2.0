@@ -4699,3 +4699,710 @@ Processing by PartidasController#create as HTML
 Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "partidas"[0m
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:43:32.509450', '2018-06-07 12:43:32.509450', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:43:32.509450', '2018-06-07 12:43:32.509450', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:43:32.511816', '2018-06-07 12:43:32.511816', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:43:32.511816', '2018-06-07 12:43:32.511816', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:43:32.513435', '2018-06-07 12:43:32.513435')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:43:32.513435', '2018-06-07 12:43:32.513435')[0m
+  [1m[35m (191.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:43:57.938985', '2018-06-07 12:43:57.938985', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:43:57.938985', '2018-06-07 12:43:57.938985', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:43:57.941328', '2018-06-07 12:43:57.941328', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:43:57.941328', '2018-06-07 12:43:57.941328', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:43:57.942876', '2018-06-07 12:43:57.942876')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:43:57.942876', '2018-06-07 12:43:57.942876')[0m
+  [1m[35m (188.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$v2PdftkislogUEiWXBnwBecFU.6AYcHH5KzxTPW486VikxYWBYwJ6"], ["created_at", "2018-06-07 12:43:58.183675"], ["updated_at", "2018-06-07 12:43:58.183675"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:44:20.169441', '2018-06-07 12:44:20.169441', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:44:20.169441', '2018-06-07 12:44:20.169441', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:44:20.171857', '2018-06-07 12:44:20.171857', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:44:20.171857', '2018-06-07 12:44:20.171857', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:44:20.173497', '2018-06-07 12:44:20.173497')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:44:20.173497', '2018-06-07 12:44:20.173497')[0m
+  [1m[35m (103.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$9eNalV6V0IAJwkOIhtUjOu5sqLF93qq3PPeLr2OYYTO8gJHYwOZVW"], ["created_at", "2018-06-07 12:44:20.336841"], ["updated_at", "2018-06-07 12:44:20.336841"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:44:46.128853', '2018-06-07 12:44:46.128853', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:44:46.128853', '2018-06-07 12:44:46.128853', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:44:46.131318', '2018-06-07 12:44:46.131318', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:44:46.131318', '2018-06-07 12:44:46.131318', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:44:46.132878', '2018-06-07 12:44:46.132878')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:44:46.132878', '2018-06-07 12:44:46.132878')[0m
+  [1m[35m (182.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$WSlAf2WdVyvFOz/LPM3olOjAUGSSiDG2/XNCMI/UiC4VlmICep9E."], ["created_at", "2018-06-07 12:44:46.367276"], ["updated_at", "2018-06-07 12:44:46.367276"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:44:57.493671', '2018-06-07 12:44:57.493671', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:44:57.493671', '2018-06-07 12:44:57.493671', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:44:57.496055', '2018-06-07 12:44:57.496055', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:44:57.496055', '2018-06-07 12:44:57.496055', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:44:57.497667', '2018-06-07 12:44:57.497667')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:44:57.497667', '2018-06-07 12:44:57.497667')[0m
+  [1m[35m (105.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$RZsuhMvI9k1We6rek99VXe.60Ge.rwzE0LfLZGVuPcAti5JMssu8W"], ["created_at", "2018-06-07 12:44:57.653367"], ["updated_at", "2018-06-07 12:44:57.653367"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:45:24.341166', '2018-06-07 12:45:24.341166', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:45:24.341166', '2018-06-07 12:45:24.341166', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:45:24.343226', '2018-06-07 12:45:24.343226', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:45:24.343226', '2018-06-07 12:45:24.343226', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:45:24.344550', '2018-06-07 12:45:24.344550')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:45:24.344550', '2018-06-07 12:45:24.344550')[0m
+  [1m[35m (197.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$qQGPgov1EIaYEpp6yf1X0eT63wSchmLbR9ZwC0CI0yA63b5YrdOs."], ["created_at", "2018-06-07 12:45:24.595880"], ["updated_at", "2018-06-07 12:45:24.595880"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:45:35.381080', '2018-06-07 12:45:35.381080', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:45:35.381080', '2018-06-07 12:45:35.381080', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:45:35.383183', '2018-06-07 12:45:35.383183', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:45:35.383183', '2018-06-07 12:45:35.383183', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:45:35.384479', '2018-06-07 12:45:35.384479')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:45:35.384479', '2018-06-07 12:45:35.384479')[0m
+  [1m[35m (236.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$sV2mRqxi5WUKgEvoglMNFO4pJdwWBZ9/U.JalSx60ts74l3Cim18S"], ["created_at", "2018-06-07 12:45:35.675035"], ["updated_at", "2018-06-07 12:45:35.675035"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:45:43.835726', '2018-06-07 12:45:43.835726', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:45:43.835726', '2018-06-07 12:45:43.835726', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:45:43.837739', '2018-06-07 12:45:43.837739', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:45:43.837739', '2018-06-07 12:45:43.837739', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:45:43.839097', '2018-06-07 12:45:43.839097')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:45:43.839097', '2018-06-07 12:45:43.839097')[0m
+  [1m[35m (193.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$fusnmDxQaPo89mhvTDW8BOeQ/FrRqpbDrUuIo.shLrEd1OL1BFOC6"], ["created_at", "2018-06-07 12:45:44.090056"], ["updated_at", "2018-06-07 12:45:44.090056"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Player3')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:46:15.563687', '2018-06-07 12:46:15.563687', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:46:15.563687', '2018-06-07 12:46:15.563687', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:46:15.565706', '2018-06-07 12:46:15.565706', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:46:15.565706', '2018-06-07 12:46:15.565706', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:46:15.566986', '2018-06-07 12:46:15.566986')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:46:15.566986', '2018-06-07 12:46:15.566986')[0m
+  [1m[35m (215.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$mAROhEgPcVJooMm0pnyMLeW3tLI4Uh1uDYnN.VZHW0IICdIfOygFW"], ["created_at", "2018-06-07 12:46:15.834804"], ["updated_at", "2018-06-07 12:46:15.834804"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Player3')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:46:18.935434', '2018-06-07 12:46:18.935434', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:46:18.935434', '2018-06-07 12:46:18.935434', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:46:18.937526', '2018-06-07 12:46:18.937526', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:46:18.937526', '2018-06-07 12:46:18.937526', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:46:18.938831', '2018-06-07 12:46:18.938831')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:46:18.938831', '2018-06-07 12:46:18.938831')[0m
+  [1m[35m (193.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$5KdKp2NgVkBaxi/gEQ2vFemjPOKI6Lb60ywBySbIZi.Kk06UxIxOe"], ["created_at", "2018-06-07 12:46:19.184453"], ["updated_at", "2018-06-07 12:46:19.184453"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Player3')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:46:25.026599', '2018-06-07 12:46:25.026599', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:46:25.026599', '2018-06-07 12:46:25.026599', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:46:25.028654', '2018-06-07 12:46:25.028654', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:46:25.028654', '2018-06-07 12:46:25.028654', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:46:25.029943', '2018-06-07 12:46:25.029943')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:46:25.029943', '2018-06-07 12:46:25.029943')[0m
+  [1m[35m (174.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$Md.Wh2hOwBJ5rxTYSJf/nON2v/Jw1IPiqj9m2cg/IY/cwmih5Kgf6"], ["created_at", "2018-06-07 12:46:25.256322"], ["updated_at", "2018-06-07 12:46:25.256322"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Player3')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:47:32.527683', '2018-06-07 12:47:32.527683', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:47:32.527683', '2018-06-07 12:47:32.527683', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:47:32.529833', '2018-06-07 12:47:32.529833', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:47:32.529833', '2018-06-07 12:47:32.529833', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, '2018-06-07 12:47:32.531111', '2018-06-07 12:47:32.531111')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, '2018-06-07 12:47:32.531111', '2018-06-07 12:47:32.531111')[0m
+  [1m[35m (104.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$MICzFx7IG44fTuNOqv8/y.XAdsrWDwd.Pq.urF/CbzNsGuxDfv/TO"], ["created_at", "2018-06-07 12:47:32.676935"], ["updated_at", "2018-06-07 12:47:32.676935"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:48:13.669441', '2018-06-07 12:48:13.669441', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:48:13.669441', '2018-06-07 12:48:13.669441', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:48:13.671535', '2018-06-07 12:48:13.671535', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:48:13.671535', '2018-06-07 12:48:13.671535', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "elo_2", "elo_3", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, 1200, 1200, '2018-06-07 12:48:13.672952', '2018-06-07 12:48:13.672952')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "elo_2", "elo_3", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, 1200, 1200, '2018-06-07 12:48:13.672952', '2018-06-07 12:48:13.672952')[0m
+  [1m[35m (192.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$1K2.gIxq0ap8a8c7hIR7BuKashKqdTSTXxKhm3Nhc4M8BpTOVvxoi"], ["created_at", "2018-06-07 12:48:13.923626"], ["updated_at", "2018-06-07 12:48:13.923626"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:48:22.820594', '2018-06-07 12:48:22.820594', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:48:22.820594', '2018-06-07 12:48:22.820594', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:48:22.822660', '2018-06-07 12:48:22.822660', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:48:22.822660', '2018-06-07 12:48:22.822660', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "elo_2", "elo_3", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, 1200, 1200, '2018-06-07 12:48:22.823981', '2018-06-07 12:48:22.823981')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "elo_2", "elo_3", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, 1200, 1200, '2018-06-07 12:48:22.823981', '2018-06-07 12:48:22.823981')[0m
+  [1m[35m (303.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$AObdpEQBeGpDVYis5yDhn.onRr8MvHdTcX/C1wTWf/r5gBpoj8RUO"], ["created_at", "2018-06-07 12:48:23.181535"], ["updated_at", "2018-06-07 12:48:23.181535"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:48:27.651247', '2018-06-07 12:48:27.651247', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "id") VALUES (1, 1, '2018-06-07 12:48:27.651247', '2018-06-07 12:48:27.651247', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:48:27.653164', '2018-06-07 12:48:27.653164', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "valor", "created_at", "updated_at", "id") VALUES ('MyString', 1, '2018-06-07 12:48:27.653164', '2018-06-07 12:48:27.653164', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "elo_2", "elo_3", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, 1200, 1200, '2018-06-07 12:48:27.654501', '2018-06-07 12:48:27.654501')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "elo_2", "elo_3", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, 1200, 1200, '2018-06-07 12:48:27.654501', '2018-06-07 12:48:27.654501')[0m
+  [1m[35m (193.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$8cH9tPtj2OUAHJtjehJ3u.EULUdUEMNaSQKbKS40R0RjsgZoGyp0."], ["created_at", "2018-06-07 12:48:27.901179"], ["updated_at", "2018-06-07 12:48:27.901179"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (207.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (128.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180502161350)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180502161350"]]
+  [1m[35m (130.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFieldToUsers (20180502170006)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180502170006"]]
+  [1m[35m (103.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddElosFromUsers (20180510234451)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "elo_1" integer[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "elo_2" integer[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "elo_3" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180510234451"]]
+  [1m[35m (101.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreatePartidas (20180515161254)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "partidas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "winP1" integer, "winP2" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180515161254"]]
+  [1m[35m (127.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPlayersToPartidas (20180515161804)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "partidas" ADD "player1_id" integer[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "partidas" ADD "player2_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180515161804"]]
+  [1m[35m (102.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddGameToPartidas (20180516151251)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "partidas" ADD "game" integer[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180516151251"]]
+  [1m[35m (161.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateJogos (20180519021130)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "jogos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180519021130"]]
+  [1m[35m (124.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAdminToUsers (20180528184749)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "users" ADD "admin" boolean[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180528184749"]]
+  [1m[35m (104.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-06-07 13:03:45.188819"], ["updated_at", "2018-06-07 13:03:45.188819"]]
+  [1m[35m (101.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.405624', '2018-06-07 13:03:45.405624', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.405624', '2018-06-07 13:03:45.405624', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.411013', '2018-06-07 13:03:45.411013', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.411013', '2018-06-07 13:03:45.411013', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.414920', '2018-06-07 13:03:45.414920', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.414920', '2018-06-07 13:03:45.414920', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.419217', '2018-06-07 13:03:45.419217', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.419217', '2018-06-07 13:03:45.419217', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.423351', '2018-06-07 13:03:45.423351', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.423351', '2018-06-07 13:03:45.423351', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.427231', '2018-06-07 13:03:45.427231', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.427231', '2018-06-07 13:03:45.427231', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.431093', '2018-06-07 13:03:45.431093', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.431093', '2018-06-07 13:03:45.431093', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.434983', '2018-06-07 13:03:45.434983', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.434983', '2018-06-07 13:03:45.434983', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.439357', '2018-06-07 13:03:45.439357', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.439357', '2018-06-07 13:03:45.439357', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.443472', '2018-06-07 13:03:45.443472', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.443472', '2018-06-07 13:03:45.443472', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.507017', '2018-06-07 13:03:45.507017', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.507017', '2018-06-07 13:03:45.507017', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.511217', '2018-06-07 13:03:45.511217', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.511217', '2018-06-07 13:03:45.511217', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.515110', '2018-06-07 13:03:45.515110', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.515110', '2018-06-07 13:03:45.515110', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.519184', '2018-06-07 13:03:45.519184', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.519184', '2018-06-07 13:03:45.519184', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.523724', '2018-06-07 13:03:45.523724', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.523724', '2018-06-07 13:03:45.523724', 298486374)[0m
+  [1m[36mFixture Delete (3.5ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:03:45.531376', '2018-06-07 13:03:45.531376', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:03:45.531376', '2018-06-07 13:03:45.531376', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, '2018-06-07 13:04:12.941681', '2018-06-07 13:04:12.941681', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, '2018-06-07 13:04:12.941681', '2018-06-07 13:04:12.941681', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "created_at", "updated_at", "id") VALUES ('PM', '2018-06-07 13:04:12.943920', '2018-06-07 13:04:12.943920', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "created_at", "updated_at", "id") VALUES ('Melee', '2018-06-07 13:04:12.943920', '2018-06-07 13:04:12.943920', 298486374)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("nome", "created_at", "updated_at", "id") VALUES ('Undernight', '2018-06-07 13:04:12.943920', '2018-06-07 13:04:12.943920', 113629430)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "elo_2", "elo_3", "admin", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 1200, 1200, 1200, 'f', '2018-06-07 13:04:12.945413', '2018-06-07 13:04:12.945413')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "elo_1", "elo_2", "elo_3", "admin", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 1200, 1200, 1200, 'f', '2018-06-07 13:04:12.945413', '2018-06-07 13:04:12.945413')[0m
+  [1m[35m (195.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_1
+---------------------------------
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_2
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Atualiza_o_elo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 13:04:13.212123"], ["updated_at", "2018-06-07 13:04:13.212123"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "elo_1" = 1203 WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "elo_1" = 1196 WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PartidaTest: test_Consegue_criar_partida
+----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 13:04:13.216376"], ["updated_at", "2018-06-07 13:04:13.216376"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "elo_1" = 1203 WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "elo_1" = 1196 WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Requer_um_jogo
+--------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+PartidaTest: test_Tem_que_ser_melhor_de_5
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+UserTest: test_Username_é_único
+-------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player2"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "elo_1", "elo_2", "elo_3", "admin") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$ElfUwTsr5UAIayjX2sMpHOAvbZNa0otVrZJonp934nWywGFGbXhwq"], ["created_at", "2018-06-07 13:04:13.234187"], ["updated_at", "2018-06-07 13:04:13.234187"], ["username", "Player3"], ["elo_1", 1200], ["elo_2", 1200], ["elo_3", 1200], ["admin", "f"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+UserTest: test_Email_é_único
+----------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player2@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m

@@ -23,7 +23,7 @@
         <select name="jogo" id="jogo" onchange="printRanks()">            
             
             <% @jogos.each do |u| %>
-                <option value= <%=u.valor%> > <%= u.nome%> </option>
+                <option value= <%=u.id%> > <%= u.nome%> </option>
             <% end %>
 
         </select>
