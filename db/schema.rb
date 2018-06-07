@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180528184749) do
+ActiveRecord::Schema.define(version: 20180607195700) do
+
+  create_table "elos", force: :cascade do |t|
+    t.integer "elo"
+    t.integer "user_id"
+    t.integer "jogo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "jogos", force: :cascade do |t|
     t.string "nome"
@@ -42,9 +50,6 @@ ActiveRecord::Schema.define(version: 20180528184749) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
-    t.integer "elo_1"
-    t.integer "elo_2"
-    t.integer "elo_3"
     t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

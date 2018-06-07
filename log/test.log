@@ -7695,3 +7695,1266 @@ Processing by PartidasController#update as HTML
 Redirected to http://www.example.com/partidas/980190962
 Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.141641', '2018-06-07 21:05:40.141641', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.141641', '2018-06-07 21:05:40.141641', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.149103', '2018-06-07 21:05:40.149103', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.149103', '2018-06-07 21:05:40.149103', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.153801', '2018-06-07 21:05:40.153801')[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.153801', '2018-06-07 21:05:40.153801')[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.153801', '2018-06-07 21:05:40.153801')[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.409699', '2018-06-07 21:05:40.409699', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.409699', '2018-06-07 21:05:40.409699', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.411048', '2018-06-07 21:05:40.411048', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.411048', '2018-06-07 21:05:40.411048', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.411818', '2018-06-07 21:05:40.411818')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.411818', '2018-06-07 21:05:40.411818')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.411818', '2018-06-07 21:05:40.411818')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.416068', '2018-06-07 21:05:40.416068', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.416068', '2018-06-07 21:05:40.416068', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.417244', '2018-06-07 21:05:40.417244', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.417244', '2018-06-07 21:05:40.417244', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.417986', '2018-06-07 21:05:40.417986')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.417986', '2018-06-07 21:05:40.417986')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.417986', '2018-06-07 21:05:40.417986')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.423002', '2018-06-07 21:05:40.423002', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.423002', '2018-06-07 21:05:40.423002', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.424428', '2018-06-07 21:05:40.424428', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.424428', '2018-06-07 21:05:40.424428', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.425232', '2018-06-07 21:05:40.425232')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.425232', '2018-06-07 21:05:40.425232')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.425232', '2018-06-07 21:05:40.425232')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.430431', '2018-06-07 21:05:40.430431', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.430431', '2018-06-07 21:05:40.430431', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.431731', '2018-06-07 21:05:40.431731', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.431731', '2018-06-07 21:05:40.431731', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.432646', '2018-06-07 21:05:40.432646')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.432646', '2018-06-07 21:05:40.432646')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.432646', '2018-06-07 21:05:40.432646')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.437905', '2018-06-07 21:05:40.437905', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.437905', '2018-06-07 21:05:40.437905', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.439263', '2018-06-07 21:05:40.439263', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.439263', '2018-06-07 21:05:40.439263', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.440149', '2018-06-07 21:05:40.440149')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.440149', '2018-06-07 21:05:40.440149')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.440149', '2018-06-07 21:05:40.440149')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.450875', '2018-06-07 21:05:40.450875', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.450875', '2018-06-07 21:05:40.450875', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.452026', '2018-06-07 21:05:40.452026', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.452026', '2018-06-07 21:05:40.452026', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.452777', '2018-06-07 21:05:40.452777')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.452777', '2018-06-07 21:05:40.452777')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.452777', '2018-06-07 21:05:40.452777')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.456930', '2018-06-07 21:05:40.456930', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.456930', '2018-06-07 21:05:40.456930', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.458071', '2018-06-07 21:05:40.458071', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.458071', '2018-06-07 21:05:40.458071', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.458794', '2018-06-07 21:05:40.458794')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.458794', '2018-06-07 21:05:40.458794')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.458794', '2018-06-07 21:05:40.458794')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.462918', '2018-06-07 21:05:40.462918', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.462918', '2018-06-07 21:05:40.462918', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.464136', '2018-06-07 21:05:40.464136', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.464136', '2018-06-07 21:05:40.464136', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.464846', '2018-06-07 21:05:40.464846')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.464846', '2018-06-07 21:05:40.464846')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.464846', '2018-06-07 21:05:40.464846')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.469292', '2018-06-07 21:05:40.469292', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.469292', '2018-06-07 21:05:40.469292', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.470491', '2018-06-07 21:05:40.470491', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.470491', '2018-06-07 21:05:40.470491', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.471224', '2018-06-07 21:05:40.471224')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.471224', '2018-06-07 21:05:40.471224')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.471224', '2018-06-07 21:05:40.471224')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.475406', '2018-06-07 21:05:40.475406', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.475406', '2018-06-07 21:05:40.475406', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.476608', '2018-06-07 21:05:40.476608', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.476608', '2018-06-07 21:05:40.476608', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.477337', '2018-06-07 21:05:40.477337')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.477337', '2018-06-07 21:05:40.477337')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.477337', '2018-06-07 21:05:40.477337')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.481477', '2018-06-07 21:05:40.481477', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.481477', '2018-06-07 21:05:40.481477', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.482659', '2018-06-07 21:05:40.482659', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.482659', '2018-06-07 21:05:40.482659', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.483417', '2018-06-07 21:05:40.483417')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.483417', '2018-06-07 21:05:40.483417')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.483417', '2018-06-07 21:05:40.483417')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.487614', '2018-06-07 21:05:40.487614', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.487614', '2018-06-07 21:05:40.487614', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.488724', '2018-06-07 21:05:40.488724', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.488724', '2018-06-07 21:05:40.488724', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.489437', '2018-06-07 21:05:40.489437')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.489437', '2018-06-07 21:05:40.489437')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.489437', '2018-06-07 21:05:40.489437')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.493499', '2018-06-07 21:05:40.493499', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.493499', '2018-06-07 21:05:40.493499', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.494616', '2018-06-07 21:05:40.494616', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.494616', '2018-06-07 21:05:40.494616', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.495340', '2018-06-07 21:05:40.495340')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.495340', '2018-06-07 21:05:40.495340')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.495340', '2018-06-07 21:05:40.495340')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:05:40.499407', '2018-06-07 21:05:40.499407', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:05:40.499407', '2018-06-07 21:05:40.499407', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.500544', '2018-06-07 21:05:40.500544', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:05:40.500544', '2018-06-07 21:05:40.500544', 298486374)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:05:40.501278', '2018-06-07 21:05:40.501278')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:05:40.501278', '2018-06-07 21:05:40.501278')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:05:40.501278', '2018-06-07 21:05:40.501278')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:06:05.887231', '2018-06-07 21:06:05.887231', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:06:05.887231', '2018-06-07 21:06:05.887231', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:06:05.889586', '2018-06-07 21:06:05.889586', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:06:05.889586', '2018-06-07 21:06:05.889586', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:06:05.890950', '2018-06-07 21:06:05.890950')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:06:05.890950', '2018-06-07 21:06:05.890950')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:06:05.890950', '2018-06-07 21:06:05.890950')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 'f', '2018-06-07 21:06:05.892296', '2018-06-07 21:06:05.892296')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 'f', '2018-06-07 21:06:05.892296', '2018-06-07 21:06:05.892296')[0m
+  [1m[35m (185.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+PartidasControllerTest: test_should_show_partida
+------------------------------------------------
+  [1m[36mPartida Load (0.2ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/partidas/980190962" for 127.0.0.1 at 2018-06-07 18:06:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-07 21:06:06.222939"], ["last_sign_in_at", "2018-06-07 21:06:06.222939"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:06:06.223756"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering partidas/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered partidas/show.html.erb within layouts/application (2.1ms)
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "jogos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+PartidasControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/partidas/980190962/edit" for 127.0.0.1 at 2018-06-07 18:06:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "admin" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["admin", "t"], ["current_sign_in_at", "2018-06-07 21:06:06.419155"], ["last_sign_in_at", "2018-06-07 21:06:06.419155"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:06:06.419471"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering partidas/edit.html.erb within layouts/application
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered partidas/_form.html.erb (54.2ms)
+  Rendered partidas/edit.html.erb within layouts/application (55.3ms)
+  [1m[36mCACHE Jogo Load (0.0ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "jogos"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+PartidasControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mPartida Load (0.2ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/partidas" for 127.0.0.1 at 2018-06-07 18:06:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-07 21:06:06.514633"], ["last_sign_in_at", "2018-06-07 21:06:06.514633"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:06:06.515250"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#index as HTML
+  Rendering partidas/index.html.erb within layouts/application
+  [1m[36mPartida Load (0.2ms)[0m  [1m[34mSELECT "partidas".* FROM "partidas"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT  "jogos".* FROM "jogos" WHERE "jogos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT  "jogos".* FROM "jogos" WHERE "jogos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partidas/index.html.erb within layouts/application (4.9ms)
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "jogos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+PartidasControllerTest: test_should_create_partida
+--------------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "partidas"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started POST "/partidas" for 127.0.0.1 at 2018-06-07 18:06:06 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-07 21:06:06.537277"], ["last_sign_in_at", "2018-06-07 21:06:06.537277"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:06:06.537698"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#create as HTML
+  Parameters: {"partida"=>{"player2"=>"Player2", "winP1"=>"3", "winP2"=>"2", "game"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Player2')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:06:06.541438"], ["updated_at", "2018-06-07 21:06:06.541438"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+PartidasControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/partidas/new" for 127.0.0.1 at 2018-06-07 18:06:06 -0300
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-07 21:06:06.546531"], ["last_sign_in_at", "2018-06-07 21:06:06.546531"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:06:06.546911"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#new as HTML
+  Rendering partidas/new.html.erb within layouts/application
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered partidas/_form.html.erb (2.5ms)
+  Rendered partidas/new.html.erb within layouts/application (2.9ms)
+  [1m[36mCACHE Jogo Load (0.0ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "jogos"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+PartidasControllerTest: test_should_update_partida
+--------------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started PATCH "/partidas/980190962" for 127.0.0.1 at 2018-06-07 18:06:06 -0300
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "admin" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["admin", "t"], ["current_sign_in_at", "2018-06-07 21:06:06.558449"], ["last_sign_in_at", "2018-06-07 21:06:06.558449"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:06:06.558746"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#update as HTML
+  Parameters: {"partida"=>{"winP1"=>"3", "winP2"=>"2"}, "id"=>"980190962"}
+  [1m[36mPartida Load (0.0ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Atualiza_o_elo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+PartidaTest: test_Tem_que_ser_melhor_de_5
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_1
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Requer_um_jogo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_2
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PartidaTest: test_Consegue_criar_partida
+----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:06:06.574776"], ["updated_at", "2018-06-07 21:06:06.574776"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+UserTest: test_Username_é_único
+-------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player2"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$ZTjESz9eIbVVz0nm.5ebGOwgCLbNJ29PjYWf4qLc5eTGOPx3hFtL."], ["created_at", "2018-06-07 21:06:06.588336"], ["updated_at", "2018-06-07 21:06:06.588336"], ["username", "Player3"], ["admin", "f"]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 1], ["created_at", "2018-06-07 21:06:06.590933"], ["updated_at", "2018-06-07 21:06:06.590933"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 2], ["created_at", "2018-06-07 21:06:06.592292"], ["updated_at", "2018-06-07 21:06:06.592292"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 3], ["created_at", "2018-06-07 21:06:06.593215"], ["updated_at", "2018-06-07 21:06:06.593215"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+UserTest: test_Email_é_único
+----------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player2@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:06:27.109748', '2018-06-07 21:06:27.109748', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:06:27.109748', '2018-06-07 21:06:27.109748', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:06:27.112441', '2018-06-07 21:06:27.112441', 980190962)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1, 1, 1, '2018-06-07 21:06:27.112441', '2018-06-07 21:06:27.112441', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:06:27.114351', '2018-06-07 21:06:27.114351')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:06:27.114351', '2018-06-07 21:06:27.114351')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:06:27.114351', '2018-06-07 21:06:27.114351')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 'f', '2018-06-07 21:06:27.115946', '2018-06-07 21:06:27.115946')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 'f', '2018-06-07 21:06:27.115946', '2018-06-07 21:06:27.115946')[0m
+  [1m[35m (193.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PartidaTest: test_Consegue_criar_partida
+----------------------------------------
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:06:27.369838"], ["updated_at", "2018-06-07 21:06:27.369838"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Atualiza_o_elo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_2
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Requer_um_jogo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+PartidaTest: test_Tem_que_ser_melhor_de_5
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_1
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+UserTest: test_Username_é_único
+-------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player2"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$Ib2W3L8mynHXomud66f4LuXRZPq.u24XczmVARK1YuoONfdwDQe4K"], ["created_at", "2018-06-07 21:06:27.400127"], ["updated_at", "2018-06-07 21:06:27.400127"], ["username", "Player3"], ["admin", "f"]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 1], ["created_at", "2018-06-07 21:06:27.405123"], ["updated_at", "2018-06-07 21:06:27.405123"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 2], ["created_at", "2018-06-07 21:06:27.406150"], ["updated_at", "2018-06-07 21:06:27.406150"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 3], ["created_at", "2018-06-07 21:06:27.406925"], ["updated_at", "2018-06-07 21:06:27.406925"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+UserTest: test_Email_é_único
+----------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player2@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:08:08.756252', '2018-06-07 21:08:08.756252', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:08:08.756252', '2018-06-07 21:08:08.756252', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 1, '2018-06-07 21:08:08.758444', '2018-06-07 21:08:08.758444', 152846780)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 2, '2018-06-07 21:08:08.758444', '2018-06-07 21:08:08.758444', 269815812)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 3, '2018-06-07 21:08:08.758444', '2018-06-07 21:08:08.758444', 655499417)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 1, '2018-06-07 21:08:08.758444', '2018-06-07 21:08:08.758444', 656204112)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 2, 2, '2018-06-07 21:08:08.758444', '2018-06-07 21:08:08.758444', 1041608940)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 3, 3, '2018-06-07 21:08:08.758444', '2018-06-07 21:08:08.758444', 152207487)[0m
+  [1m[36mFixture Delete (0.0ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:08:08.760397', '2018-06-07 21:08:08.760397')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:08:08.760397', '2018-06-07 21:08:08.760397')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:08:08.760397', '2018-06-07 21:08:08.760397')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 'f', '2018-06-07 21:08:08.761721', '2018-06-07 21:08:08.761721')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 'f', '2018-06-07 21:08:08.761721', '2018-06-07 21:08:08.761721')[0m
+  [1m[35m (190.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_2
+---------------------------------
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+PartidaTest: test_Tem_que_ser_melhor_de_5
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_1
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Atualiza_o_elo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PartidaTest: test_Consegue_criar_partida
+----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:08:09.018702"], ["updated_at", "2018-06-07 21:08:09.018702"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Requer_um_jogo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+UserTest: test_Username_é_único
+-------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player2"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$IxtzKSUGKw.zSQaysqTGquJX4meIVkmmFE8rjmnRtFvqgefrkWud2"], ["created_at", "2018-06-07 21:08:09.038539"], ["updated_at", "2018-06-07 21:08:09.038539"], ["username", "Player3"], ["admin", "f"]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 1], ["created_at", "2018-06-07 21:08:09.043250"], ["updated_at", "2018-06-07 21:08:09.043250"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 2], ["created_at", "2018-06-07 21:08:09.044235"], ["updated_at", "2018-06-07 21:08:09.044235"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 3], ["created_at", "2018-06-07 21:08:09.044967"], ["updated_at", "2018-06-07 21:08:09.044967"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+UserTest: test_Email_é_único
+----------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player2@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:08:52.584126', '2018-06-07 21:08:52.584126', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:08:52.584126', '2018-06-07 21:08:52.584126', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 1, '2018-06-07 21:08:52.586279', '2018-06-07 21:08:52.586279', 152846780)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 2, '2018-06-07 21:08:52.586279', '2018-06-07 21:08:52.586279', 269815812)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 3, '2018-06-07 21:08:52.586279', '2018-06-07 21:08:52.586279', 655499417)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 1, '2018-06-07 21:08:52.586279', '2018-06-07 21:08:52.586279', 656204112)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 2, 2, '2018-06-07 21:08:52.586279', '2018-06-07 21:08:52.586279', 1041608940)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 3, 3, '2018-06-07 21:08:52.586279', '2018-06-07 21:08:52.586279', 152207487)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:08:52.588330', '2018-06-07 21:08:52.588330')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:08:52.588330', '2018-06-07 21:08:52.588330')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:08:52.588330', '2018-06-07 21:08:52.588330')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 'f', '2018-06-07 21:08:52.589641', '2018-06-07 21:08:52.589641')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 'f', '2018-06-07 21:08:52.589641', '2018-06-07 21:08:52.589641')[0m
+  [1m[35m (108.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PartidaTest: test_Consegue_criar_partida
+----------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:08:52.750936"], ["updated_at", "2018-06-07 21:08:52.750936"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Atualiza_o_elo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_2
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Requer_um_jogo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_1
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+PartidaTest: test_Tem_que_ser_melhor_de_5
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$bb7gY69hkBYMq.WPR9AMk.zHWPm0VDAfkvC2FLfFhRgej7xDE.Ahu"], ["created_at", "2018-06-07 21:08:52.778574"], ["updated_at", "2018-06-07 21:08:52.778574"], ["username", "Player3"], ["admin", "f"]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 1], ["created_at", "2018-06-07 21:08:52.783411"], ["updated_at", "2018-06-07 21:08:52.783411"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 2], ["created_at", "2018-06-07 21:08:52.784409"], ["updated_at", "2018-06-07 21:08:52.784409"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 3], ["created_at", "2018-06-07 21:08:52.785159"], ["updated_at", "2018-06-07 21:08:52.785159"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+UserTest: test_Email_é_único
+----------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player2@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+UserTest: test_Username_é_único
+-------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player2"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:11:41.260710', '2018-06-07 21:11:41.260710', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:11:41.260710', '2018-06-07 21:11:41.260710', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 1, '2018-06-07 21:11:41.262867', '2018-06-07 21:11:41.262867', 152846780)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 2, '2018-06-07 21:11:41.262867', '2018-06-07 21:11:41.262867', 269815812)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 3, '2018-06-07 21:11:41.262867', '2018-06-07 21:11:41.262867', 655499417)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 2, 1, '2018-06-07 21:11:41.262867', '2018-06-07 21:11:41.262867', 656204112)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 2, 2, '2018-06-07 21:11:41.262867', '2018-06-07 21:11:41.262867', 1041608940)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 2, 3, '2018-06-07 21:11:41.262867', '2018-06-07 21:11:41.262867', 152207487)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:11:41.264853', '2018-06-07 21:11:41.264853')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:11:41.264853', '2018-06-07 21:11:41.264853')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:11:41.264853', '2018-06-07 21:11:41.264853')[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 'f', '2018-06-07 21:11:41.266164', '2018-06-07 21:11:41.266164')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 'f', '2018-06-07 21:11:41.266164', '2018-06-07 21:11:41.266164')[0m
+  [1m[35m (190.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Atualiza_o_elo
+--------------------------------
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mElo Load (0.2ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:11:41.515506"], ["updated_at", "2018-06-07 21:11:41.515506"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1203 WHERE "elos"."id" = ?[0m  [["id", 152846780]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1196 WHERE "elos"."id" = ?[0m  [["id", 656204112]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Requer_um_jogo
+--------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_1
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+PartidaTest: test_Tem_que_ser_melhor_de_5
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PartidaTest: test_Consegue_criar_partida
+----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:11:41.530279"], ["updated_at", "2018-06-07 21:11:41.530279"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1203 WHERE "elos"."id" = ?[0m  [["id", 152846780]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1196 WHERE "elos"."id" = ?[0m  [["id", 656204112]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_2
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$zBNkGf52J3HDFN/pB1Mrl.mm2WJ1.u6JlpLr0FORYNBJJsrTQfeWK"], ["created_at", "2018-06-07 21:11:41.543279"], ["updated_at", "2018-06-07 21:11:41.543279"], ["username", "Player3"], ["admin", "f"]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 1], ["created_at", "2018-06-07 21:11:41.548291"], ["updated_at", "2018-06-07 21:11:41.548291"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 2], ["created_at", "2018-06-07 21:11:41.549365"], ["updated_at", "2018-06-07 21:11:41.549365"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 3], ["created_at", "2018-06-07 21:11:41.550120"], ["updated_at", "2018-06-07 21:11:41.550120"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+UserTest: test_Email_é_único
+----------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player2@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+UserTest: test_Username_é_único
+-------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player2"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "partidas"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (3, 2, 1, 2, 1, '2018-06-07 21:11:45.686667', '2018-06-07 21:11:45.686667', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "player1_id", "player2_id", "game", "created_at", "updated_at", "id") VALUES (2, 3, 1, 2, 2, '2018-06-07 21:11:45.686667', '2018-06-07 21:11:45.686667', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "elos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 1, '2018-06-07 21:11:45.688816', '2018-06-07 21:11:45.688816', 152846780)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 2, '2018-06-07 21:11:45.688816', '2018-06-07 21:11:45.688816', 269815812)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 1, 3, '2018-06-07 21:11:45.688816', '2018-06-07 21:11:45.688816', 655499417)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 2, 1, '2018-06-07 21:11:45.688816', '2018-06-07 21:11:45.688816', 656204112)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 2, 2, '2018-06-07 21:11:45.688816', '2018-06-07 21:11:45.688816', 1041608940)[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at", "id") VALUES (1200, 2, 3, '2018-06-07 21:11:45.688816', '2018-06-07 21:11:45.688816', 152207487)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "jogos"[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (1, 'PM', '2018-06-07 21:11:45.690714', '2018-06-07 21:11:45.690714')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (2, 'Melee', '2018-06-07 21:11:45.690714', '2018-06-07 21:11:45.690714')[0m
+  [1m[36mFixture Insert (0.0ms)[0m  [1m[32mINSERT INTO "jogos" ("id", "nome", "created_at", "updated_at") VALUES (3, 'Undernight', '2018-06-07 21:11:45.690714', '2018-06-07 21:11:45.690714')[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (1, 'Player1', 'player1@ladder.com', 'f', '2018-06-07 21:11:45.692005', '2018-06-07 21:11:45.692005')[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id", "username", "email", "admin", "created_at", "updated_at") VALUES (2, 'Player2', 'player2@ladder.com', 'f', '2018-06-07 21:11:45.692005', '2018-06-07 21:11:45.692005')[0m
+  [1m[35m (285.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+PartidasControllerTest: test_should_show_partida
+------------------------------------------------
+  [1m[36mPartida Load (0.2ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/partidas/980190962" for 127.0.0.1 at 2018-06-07 18:11:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-07 21:11:46.089671"], ["last_sign_in_at", "2018-06-07 21:11:46.089671"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:11:46.090371"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering partidas/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered partidas/show.html.erb within layouts/application (2.0ms)
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "jogos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 2)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 2)[0m
+Completed 200 OK in 145ms (Views: 140.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+PartidasControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/partidas/new" for 127.0.0.1 at 2018-06-07 18:11:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-07 21:11:46.254248"], ["last_sign_in_at", "2018-06-07 21:11:46.254248"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:11:46.254602"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#new as HTML
+  Rendering partidas/new.html.erb within layouts/application
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered partidas/_form.html.erb (13.5ms)
+  Rendered partidas/new.html.erb within layouts/application (14.2ms)
+  [1m[36mCACHE Jogo Load (0.0ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "jogos"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 2)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 2)[0m
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+PartidasControllerTest: test_should_update_partida
+--------------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started PATCH "/partidas/980190962" for 127.0.0.1 at 2018-06-07 18:11:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "admin" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["admin", "t"], ["current_sign_in_at", "2018-06-07 21:11:46.279223"], ["last_sign_in_at", "2018-06-07 21:11:46.279223"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:11:46.279554"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#update as HTML
+  Parameters: {"partida"=>{"winP1"=>"3", "winP2"=>"2"}, "id"=>"980190962"}
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1203 WHERE "elos"."id" = ?[0m  [["id", 152846780]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1196 WHERE "elos"."id" = ?[0m  [["id", 656204112]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/partidas/980190962
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+PartidasControllerTest: test_should_create_partida
+--------------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "partidas"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started POST "/partidas" for 127.0.0.1 at 2018-06-07 18:11:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-07 21:11:46.295382"], ["last_sign_in_at", "2018-06-07 21:11:46.295382"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:11:46.295764"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#create as HTML
+  Parameters: {"partida"=>{"player2"=>"Player2", "winP1"=>"3", "winP2"=>"2", "game"=>"1"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username = 'Player2')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:11:46.299258"], ["updated_at", "2018-06-07 21:11:46.299258"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1203 WHERE "elos"."id" = ?[0m  [["id", 152846780]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1196 WHERE "elos"."id" = ?[0m  [["id", 656204112]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/partidas/980190963
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "partidas"[0m
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" ORDER BY "partidas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+PartidasControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/partidas" for 127.0.0.1 at 2018-06-07 18:11:46 -0300
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-06-07 21:11:46.305733"], ["last_sign_in_at", "2018-06-07 21:11:46.305733"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:11:46.306069"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#index as HTML
+  Rendering partidas/index.html.erb within layouts/application
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT "partidas".* FROM "partidas"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT  "jogos".* FROM "jogos" WHERE "jogos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mJogo Load (0.0ms)[0m  [1m[34mSELECT  "jogos".* FROM "jogos" WHERE "jogos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered partidas/index.html.erb within layouts/application (2.8ms)
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "jogos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 2)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 2)[0m
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+PartidasControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/partidas/980190962/edit" for 127.0.0.1 at 2018-06-07 18:11:46 -0300
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "admin" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["admin", "t"], ["current_sign_in_at", "2018-06-07 21:11:46.319688"], ["last_sign_in_at", "2018-06-07 21:11:46.319688"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-06-07 21:11:46.320188"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by PartidasController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mPartida Load (0.1ms)[0m  [1m[34mSELECT  "partidas".* FROM "partidas" WHERE "partidas"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering partidas/edit.html.erb within layouts/application
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered partidas/_form.html.erb (2.9ms)
+  Rendered partidas/edit.html.erb within layouts/application (3.3ms)
+  [1m[36mCACHE Jogo Load (0.0ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "jogos"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 2 and user_id = 2)[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 2)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 1)[0m
+  [1m[36mCACHE Elo Load (0.0ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 3 and user_id = 2)[0m
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Atualiza_o_elo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:11:46.333955"], ["updated_at", "2018-06-07 21:11:46.333955"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.2ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1203 WHERE "elos"."id" = ?[0m  [["id", 152846780]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1196 WHERE "elos"."id" = ?[0m  [["id", 656204112]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_2
+---------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+PartidaTest: test_Requer_player_1
+---------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+PartidaTest: test_Requer_um_jogo
+--------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+PartidaTest: test_Tem_que_ser_melhor_de_5
+-----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+PartidaTest: test_Consegue_criar_partida
+----------------------------------------
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "partidas" ("winP1", "winP2", "created_at", "updated_at", "player1_id", "player2_id", "game") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["winP1", 3], ["winP2", 2], ["created_at", "2018-06-07 21:11:46.345658"], ["updated_at", "2018-06-07 21:11:46.345658"], ["player1_id", 1], ["player2_id", 2], ["game", 1]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 1)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1203 WHERE "elos"."id" = ?[0m  [["id", 152846780]]
+  [1m[36mElo Load (0.1ms)[0m  [1m[34mSELECT "elos".* FROM "elos" WHERE (jogo_id = 1 and user_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "elos" SET "elo" = 1196 WHERE "elos"."id" = ?[0m  [["id", 656204112]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------
+UserTest: test_Cria_usuário
+---------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "username", "admin") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "player3@ladder.com"], ["encrypted_password", "$2a$04$SGm3gPi6tlfJYM/3ZXiYa.claOfgrJ18BFdppf4Uow6O8vDryDsta"], ["created_at", "2018-06-07 21:11:46.356869"], ["updated_at", "2018-06-07 21:11:46.356869"], ["username", "Player3"], ["admin", "f"]]
+  [1m[36mJogo Load (0.1ms)[0m  [1m[34mSELECT "jogos".* FROM "jogos"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 1], ["created_at", "2018-06-07 21:11:46.359356"], ["updated_at", "2018-06-07 21:11:46.359356"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 2], ["created_at", "2018-06-07 21:11:46.360274"], ["updated_at", "2018-06-07 21:11:46.360274"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "elos" ("elo", "user_id", "jogo_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["elo", 1200], ["user_id", 3], ["jogo_id", 3], ["created_at", "2018-06-07 21:11:46.360995"], ["updated_at", "2018-06-07 21:11:46.360995"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------
+UserTest: test_Email_é_único
+----------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player2@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player3"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------
+UserTest: test_Username_é_único
+-------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "player3@ladder.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Player2"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m

@@ -38,23 +38,13 @@ printRanks();
 function printRanks() {
     var str="";
     switch (aux.options[aux.selectedIndex].value) {
-        case "1":
-            str = "<% @users = User.all.sort_by {|x| -x.elo_1} %>"
-            str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_1%> </p><% end %>"
+        <% (1..Jogo.all.size).each {|i| %>
+                case "<%= i %>":
+            str = "<% @users = User.all.sort_by {|x| -x.elo(i)} %>"
+            str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo(i)%> </p><% end %>"
             break;
-        case "2":
-            str = "<% @users = User.all.sort_by {|x| -x.elo_2} %>"
-            str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_2%> </p><% end %>"
-            break;
-        case "3":
-            str = "<% @users = User.all.sort_by {|x| -x.elo_3} %>"
-            str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo_3%> </p><% end %>"
-            break;
+            <% } %>
     }
     document.getElementById("teste").innerHTML =  str;
 }
-
-
-
-
 </script>

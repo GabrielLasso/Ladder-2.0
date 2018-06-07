@@ -1,0 +1,32 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one1:
+  elo: 1200
+  user_id: 1
+  jogo_id: 1
+
+one2:
+  elo: 1200
+  user_id: 1
+  jogo_id: 2
+
+one3:
+  elo: 1200
+  user_id: 1
+  jogo_id: 3
+
+two1:
+  elo: 1200
+  user_id: 2
+  jogo_id: 1
+
+two2:
+  elo: 1200
+  user_id: 2
+  jogo_id: 2
+
+two3:
+  elo: 1200
+  user_id: 2
+  jogo_id: 3
+

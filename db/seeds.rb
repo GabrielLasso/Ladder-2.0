@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+for jogo in ["PM", "Melee", "UnderNight"]
+	Jogo.create(nome: jogo)
+end
+
 User.create(
 	username: "k1",
 	email: "k1tanaka@hotmail.com",
@@ -33,9 +37,5 @@ User.create(
 	password: "123456",
 	password_confirmation: "123456"
 )
-
-for jogo in ["PM", "Melee", "UnderNight"]
-	Jogo.create(nome: jogo)
-end
 
 User.where("username = 'lasso'")[0].update_column(:admin, true)

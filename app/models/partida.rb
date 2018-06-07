@@ -13,17 +13,8 @@ class Partida < ApplicationRecord
     validates_with PartidaValidator
     after_save :update_elos
     def update_elos
-        case self.game
-        when 1
-            elo1 = self.player1.elo_1
-            elo2 = self.player2.elo_1
-        when 2
-            elo1 = self.player1.elo_2
-            elo2 = self.player2.elo_2
-        when 3
-            elo1 = self.player1.elo_3
-            elo2 = self.player2.elo_3
-        end
+        elo1 = self.player1.elo(self.game)
+        elo2 = self.player2.elo(self.game)
         total_games = self.winP1+self.winP2
         score1 = self.winP1/total_games.to_f
         score2 = self.winP2/total_games.to_f

@@ -8,16 +8,10 @@ one:
     id:         1
     username:   "Player1"
     email:      "player1@ladder.com"
-    elo_1:      1200
-    elo_2:      1200
-    elo_3:      1200
     admin:      false
 
 two:
     id:         2
     username:   "Player2"
     email:      "player2@ladder.com"
-    elo_1:      1200
-    elo_2:      1200
-    elo_3:      1200
     admin:      false

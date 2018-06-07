@@ -35,10 +35,10 @@ class PartidaTest < ActiveSupport::TestCase
     test "Atualiza o elo" do
         user1 = User.find(1)
         user2 = User.find(2)
-        old_elo1 = user1.elo_1
-        old_elo2 = user2.elo_1
+        old_elo1 = user1.elo(1)
+        old_elo2 = user2.elo(1)
         partida = Partida.new({player1: user1, player2: user2, game: 1, winP1: 3, winP2: 2})
         partida.save
-        assert user1.elo_1 > old_elo1 and user2.elo_1 < old_elo2
+        assert user1.elo(1) > old_elo1 and user2.elo(1) < old_elo2
     end
 end
