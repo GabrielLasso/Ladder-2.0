@@ -38,7 +38,9 @@ class User < ApplicationRecord
         return self.personagem
     end
     def add_main (personagem)
-        self.personagem << personagem
+        if self.personagem.where("personagem_id=#{personagem.id}").empty?
+            self.personagem << personagem
+        end
     end
     def delete_main (personagem)
         self.personagem.delete (personagem)

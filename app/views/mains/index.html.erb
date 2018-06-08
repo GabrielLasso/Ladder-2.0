@@ -1,0 +1,48 @@
+<table>
+    <thead>
+        <tr>
+            <th>Personagem</th>
+            <th>Jogo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for p in current_user.mains %>
+        <tr>
+            <td><%= p %></td>
+            <td><%= Jogo.where("id=#{p.jogo_id}")[0] %></td>
+            <td><%= link_to "Delete", delete_main_path(:id => p.id), method: :delete %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<form>
+    <select name = "jogo_id"id = "jogo_main" onchange = "obterCharJogo()">
+        <% @jogos.each do |j| %>
+        <option value = <%= j.id %> > <%=j.nome %> </option>
+        <% end %>
+    </select>
+    <div id='chars'> </div>
+    <%= link_to "Add char", add_main_path(id: 2), method: "post" %>
+</form>
+<script>
+    obterCharJogo()
+    function obterCharJogo() {
+        var idJogo =  document.getElementById("jogo_main");
+        var str = "<select name='char'>";
+        var id = idJogo.options[idJogo.selectedIndex].value;
+        switch (id) {
+            <% (1..Jogo.all.size).each {|j| %>
+                    case "<%= j %>":
+                    <% chars = Personagem.where("jogo_id = #{j}") %>
+                    <% for c in chars %>
+                    str += "<option value=><%= c.nome %></option>"
+                    <% end %>
+                    str += "</select>";
+                break;
+                <% } %>
+        }
+        document.getElementById("chars").innerHTML = str; 
+    }
+
+</script>

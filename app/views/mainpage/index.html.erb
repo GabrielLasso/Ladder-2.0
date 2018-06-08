@@ -1,23 +1,5 @@
 <p>
 <%= link_to "Partidas", partidas_path %>
 </p>
-<p>
-Mains:
-</p>
-<table>
-    <thead>
-        <tr>
-            <th>Personagem</th>
-            <th>Jogo</th>
-        </tr>
-    </thead>
-    <tbody>
-<% for p in current_user.mains %>
-<tr>
-<td><%= p %></td>
-<td><%= Jogo.where("id=#{p.jogo_id}")[0] %></td>
-</tr>    
-<% end %>
-    </tbody>
-</table>
 
+<%= link_to "Mains", mains_path %>

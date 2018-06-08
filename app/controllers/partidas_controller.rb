@@ -27,10 +27,6 @@ class PartidasController < ApplicationController
     # POST /partidas
     # POST /partidas.json
     def create
-        puts partida_params
-        puts partida_params
-        puts partida_params
-        puts partida_params
         p1 = current_user
         p2 = User.where("username = ?", partida_params[:player2])[0]
         winp1 = partida_params[:winP1]
@@ -56,7 +52,13 @@ class PartidasController < ApplicationController
             return
         else
             respond_to do |format|
-                if @partida.update(partida_params)
+                p1 = current_user
+                p2 = User.where("username = ?", partida_params[:player2])[0]
+                winp1 = partida_params[:winP1]
+                winp2 = partida_params[:winP2]
+                game = partida_params[:game]
+                if @partida.update(player1: p1, player2: p2, winP1: winp1, winP2: winp2, game: game)
+
                     format.html { redirect_to @partida, notice: 'Partida was successfully updated.' }
                     format.json { render :show, status: :ok, location: @partida }
                 else
