@@ -15,28 +15,28 @@
         <% end %>
     </tbody>
 </table>
-
-<form>
-    <select name = "jogo_id"id = "jogo_main" onchange = "obterCharJogo()">
+<h2>New mains</h2>
+<%= form_for :add_main do |f| %>
+    <select id = "jogo_main" onchange = "obterCharJogo()">
         <% @jogos.each do |j| %>
         <option value = <%= j.id %> > <%=j.nome %> </option>
         <% end %>
     </select>
     <div id='chars'> </div>
-    <%= link_to "Add char", add_main_path(id: 2), method: "post" %>
-</form>
+    <%= submit_tag "Add char" %>
+<% end %>
 <script>
     obterCharJogo()
     function obterCharJogo() {
         var idJogo =  document.getElementById("jogo_main");
-        var str = "<select name='char'>";
+        var str = "<select name='char_id'>";
         var id = idJogo.options[idJogo.selectedIndex].value;
         switch (id) {
             <% (1..Jogo.all.size).each {|j| %>
                     case "<%= j %>":
                     <% chars = Personagem.where("jogo_id = #{j}") %>
                     <% for c in chars %>
-                    str += "<option value=><%= c.nome %></option>"
+                    str += "<option value=<%= c.id %>><%= c.nome %></option>"
                     <% end %>
                     str += "</select>";
                 break;
