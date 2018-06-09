@@ -53,4 +53,14 @@ class User < ApplicationRecord
     def delete_main (personagem)
         self.personagem.delete (personagem)
     end
+
+    def add_admin
+        self.admin = true
+        self.save
+    end
+
+    def remove_admin
+        self.admin = false
+        self.save
+    end
 end

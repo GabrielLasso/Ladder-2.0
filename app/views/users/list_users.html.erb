@@ -4,22 +4,33 @@
 	<thead>
 		<tr>
 			<th>Usuários</th>
+			<th>Admin</th>
 		</tr>
 	</thead>
 	<tbody>
 		<% @usuarios.each do |usuario| %>
 			<tr>
-				<td>
-					<a>
-						<%= usuario.username %>
-						<% if usuario.admin? %>
-							(admin)
-						<% end %>
-					</a>
+				<td>					
+					<%= usuario.username %>
 				</td>
+				<td>
+					<%= usuario.admin %>
+				</td>
+				<% if current_user.admin? %>
+					<td>
+						<% if current_user.username != usuario.username%>
+							<% if !usuario.admin? %>
+								<%= link_to 'Tornar Admin', add_admin_path(:userId => usuario.id), method: :post%>
+							<% else %>
+								<%= link_to 'Remover Admin', remove_admin_path(:userId => usuario.id), method: :post%>
+							<% end %>
+						<% end%>
+					</td>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
+
 <br>
 <br>
