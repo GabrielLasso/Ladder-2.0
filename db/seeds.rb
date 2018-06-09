@@ -35,6 +35,7 @@ Personagem.create(nome: "Pikachu"       , jogo: melee)
 Personagem.create(nome: "Mewtwo"        , jogo: melee)
 Personagem.create(nome: "Mr. Game&Watch", jogo: melee)
 Personagem.create(nome: "Roy"           , jogo: melee)
+Personagem.create(nome: "Sheik"         , jogo: melee)
 
 Personagem.create(nome: "Fox"           , jogo: pm)
 Personagem.create(nome: "Jigglypuff"    , jogo: pm)
