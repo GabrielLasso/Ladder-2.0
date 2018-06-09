@@ -1,0 +1,25 @@
+<br>
+<br>
+<table>
+	<thead>
+		<tr>
+			<th>Usuários</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @usuarios.each do |usuario| %>
+			<tr>
+				<td>
+					<a>
+						<%= usuario.username %>
+						<% if usuario.admin? %>
+							(admin)
+						<% end %>
+					</a>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+<br>
+<br>

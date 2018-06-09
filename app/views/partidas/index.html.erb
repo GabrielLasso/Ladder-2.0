@@ -23,7 +23,7 @@
         <td><%= p2.username %></td>
         <td><%= partida.winP1 %></td>
         <td><%= partida.winP2 %></td>
-        <td> <%= Jogo.find(partida.game).nome %> </td>
+        <td><%= Jogo.find(partida.game).nome %> </td>
         <td><%= link_to 'Show', partida %></td>
         <td><%= link_to 'Edit', edit_partida_path(partida) %></td>
         <td><%= link_to 'Destroy', partida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
