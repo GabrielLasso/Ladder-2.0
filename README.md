@@ -10,9 +10,9 @@ Para preparar a aplicação:
 - $rails db:migrate
 - $rake db:seed
 
+Caso já haja uma database relacionada talvez seja necessário rodar $rails db:rollback\
+antes realizar a migration\
 Após isso é só rodar acessar como uma aplicação rails comum
-Caso já haja uma database relacionada talvez seja necessário rodar $rails db:rollback
-antes realizar a migration
 
 ## Grupo
 
