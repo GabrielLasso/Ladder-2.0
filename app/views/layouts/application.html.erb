@@ -12,10 +12,14 @@
         <p class="alert"><%= alert %></p>
 
         <% if user_signed_in? %>
-        <p> Olá <%=current_user.username %></p>
-        <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
+            <p> Olá <%=current_user.username %></p>
+            <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
+            <br>
+            <%= link_to 'Menu Inicial', root_path %>
+            <br>
+            <br>
         <% else %>
-        <%= link_to "Entrar",new_user_session_path %>
+            <%= link_to "Entrar",new_user_session_path %>
         <% end %>
         <div class="left-sidebar">
             <h3>Ranking</h3>

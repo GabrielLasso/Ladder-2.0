@@ -26,11 +26,6 @@ ActiveRecord::Schema.define(version: 20180607214353) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "personagems_users", id: false, force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "personagem_id", null: false
-  end
-
   create_table "partidas", force: :cascade do |t|
     t.integer "winP1"
     t.integer "winP2"
@@ -46,6 +41,11 @@ ActiveRecord::Schema.define(version: 20180607214353) do
     t.integer "jogo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "personagems_users", id: false, force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "personagem_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
