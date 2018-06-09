@@ -128,3 +128,4 @@ User.create(
 )
 
 User.where("username = 'lasso'")[0].update_column(:admin, true)
+User.where("username = 'k1'")[0].update_column(:admin, true)
