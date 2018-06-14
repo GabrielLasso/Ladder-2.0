@@ -1,0 +1,29 @@
+<h3>Partidas de <%= current_user %></h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Oponente</th>
+            <th>Resultado</th>
+            <th>Jogo</th>
+            <th colspan="3"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @partidas.each do |partida| %>
+        <tr>
+            <% oponente = partida.player1 == current_user ? 2 : 1 %>
+                <td><%= oponente == 1 ? partida.player1.username : partida.player2.username %></td>
+                <td><%= oponente == 1 ? "#{partida.winP2}/#{partida.winP1}" : "#{partida.winP1}/#{partida.winP2}" %></td>
+                <td><%= Jogo.find(partida.game).nome %> </td>
+                <td><%= link_to 'Show', partida %></td>
+                <% if current_user.admin? %>
+                <td><%= link_to 'Edit', edit_partida_path(partida) %></td>
+                <td><%= link_to 'Destroy', partida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+

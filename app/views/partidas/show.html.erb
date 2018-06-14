@@ -2,15 +2,7 @@
 
 <p>
   <strong>Game:</strong>
-  <% g = @partida.game %>
-  <% case g %>
-  <% when 1 %>
-  <%= $game1 %>
-  <% when 2 %>
-  <%= $game2 %>
-  <% when 3 %>
-  <%= $game3 %>
-  <% end %>
+  <%= Jogo.find(@partida.game) %>
 </p>
 
 <p>

@@ -1,0 +1,16 @@
+<h1>Jogos</h1>
+<table>
+    <% @jogos.each do |jogo| %>
+    <tr>
+        <td><%=jogo.nome %></td>
+        <td><%= link_to "Histórico", historico_game_path(jogo.id) %></td>
+    </tr>
+    <% end %>
+</table>
+
+<% if current_user.admin? %>
+<%= form_for :add_jogo do |f| %>
+<input name = "nome"></input>
+<%= submit_tag "Add game" %>
+<% end %>
+<% end %>
