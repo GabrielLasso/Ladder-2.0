@@ -10,12 +10,12 @@
         <tr>
             <td><%= p %></td>
             <td><%= Jogo.where("id=#{p.jogo_id}")[0] %></td>
-            <td><%= link_to "Delete", delete_main_path(:id => p.id), method: :delete %></td>
+            <td><%= link_to "Deletar", delete_main_path(:id => p.id), method: :delete %></td>
         </tr>
         <% end %>
     </tbody>
 </table>
-<h2>New mains</h2>
+<h2>Novo Main</h2>
 <%= form_for :add_main do |f| %>
     <select id = "jogo_main" onchange = "obterCharJogo()">
         <% @jogos.each do |j| %>
@@ -23,7 +23,7 @@
         <% end %>
     </select>
     <div id='chars'> </div>
-    <%= submit_tag "Add char" %>
+    <%= submit_tag "Adicionar Main" %>
 <% end %>
 <script>
     obterCharJogo()

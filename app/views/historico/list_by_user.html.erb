@@ -17,10 +17,10 @@
                 <td><%= oponente == 1 ? partida.player1.username : partida.player2.username %></td>
                 <td><%= oponente == 1 ? "#{partida.winP2}/#{partida.winP1}" : "#{partida.winP1}/#{partida.winP2}" %></td>
                 <td><%= Jogo.find(partida.game).nome %> </td>
-                <td><%= link_to 'Show', partida %></td>
+                <td><%= link_to 'Mostrar', partida %></td>
                 <% if current_user.admin? %>
-                <td><%= link_to 'Edit', edit_partida_path(partida) %></td>
-                <td><%= link_to 'Destroy', partida, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Editar', edit_partida_path(partida) %></td>
+                <td><%= link_to 'Destruir', partida, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
                 <% end %>
         </tr>
         <% end %>

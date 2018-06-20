@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Game:</strong>
+  <strong>Jogo:</strong>
   <%= Jogo.find(@partida.game) %>
 </p>
 
@@ -18,14 +18,14 @@
 </p>
 
 <p>
-  <strong>Winp1:</strong>
+  <strong>VitóriasP1:</strong>
   <%= @partida.winP1 %>
 </p>
 
 <p>
-  <strong>Winp2:</strong>
+  <strong>VitóriasP2:</strong>
   <%= @partida.winP2 %>
 </p>
 
-<%= link_to 'Edit', edit_partida_path(@partida) %> |
-<%= link_to 'Back', partidas_path %>
+<%= link_to 'Editar', edit_partida_path(@partida) %> |
+<%= link_to 'Voltar', partidas_path %>

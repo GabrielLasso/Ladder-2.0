@@ -1,7 +1,7 @@
 <%= form_with(model: partida, local: true) do |form| %>
   <% if partida.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(partida.errors.count, "error") %> prohibited this partida from being saved:</h2>
+      <h2><%= pluralize(partida.errors.count, "erro") %> proibem esta partida de ser salva:</h2>
 
       <ul>
       <% partida.errors.full_messages.each do |message| %>
@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :game %>
+    <%= form.label :Jogo %>
     <%
       a = []
       Jogo.all.each do |u|
@@ -24,12 +24,12 @@
   </div>
 
   <div class="field">
-    <%= form.label :player1 %>
+    <%= form.label :Player_1 %>
     <input id="partida_player1" value=<%=current_user%> readonly="readonly"/>
   </div>
 
   <div class="field">
-    <%= form.label :player2 %>
+    <%= form.label :Player_2 %>
     <%
       a = []
       User.all.each do |u|
@@ -43,12 +43,12 @@
     </div>
 
   <div class="field">
-    <%= form.label :winP1 %>
+    <%= form.label :vitórias_de_P1 %>
     <%= form.number_field :winP1, id: :partida_winP1, value: 0 %>
   </div>
 
   <div class="field">
-    <%= form.label :winP2 %>
+    <%= form.label :vitórias_de_P2 %>
     <%= form.number_field :winP2, id: :partida_winP2, value: 0 %>
   </div>
 
