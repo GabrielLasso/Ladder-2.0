@@ -47,7 +47,6 @@ class PartidasController < ApplicationController
     # PATCH/PUT /partidas/1
     # PATCH/PUT /partidas/1.json
     def update
-        puts params
         if !current_user.admin?
             redirect_to partidas_path
             return
