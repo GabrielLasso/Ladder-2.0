@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/usuarios" => "users#list_users", as: 'listar_usuarios'
   post "/usuario/add" => "users#add_admin", as: 'add_admin'
   post "/usuario/remove" => "users#remove_admin", as: 'remove_admin'
+  post "/punicao" => "users#aplica_punicao", as: 'pune_jogador'
   get "/historico" => "historico#list_by_user", as: 'historico_user'
   get "/historico/game/:id" => "historico#list_by_game", as: 'historico_game'
   get "/games" => "jogos#index", as: 'listar_jogos'
