@@ -77,7 +77,7 @@ class PartidasController < ApplicationController
         else
             @partida.destroy
             respond_to do |format|
-                format.html { redirect_to partidas_url, notice: 'Partida was successfully destroyed.' }
+                format.html { redirect_to partidas_url, notice: 'Partida removida com sucesso.' }
                 format.json { head :no_content }
             end
         end

@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get "/historico/game/:id" => "historico#list_by_game", as: 'historico_game'
   get "/games" => "jogos#index", as: 'listar_jogos'
   post "/games" => "jogos#new_game"
+  post "/game/remove" => "jogos#remove_jogo", as: 'remove_jogo'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
