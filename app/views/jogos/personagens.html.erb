@@ -1,0 +1,20 @@
+<h1>Personagens</h1>
+<table>
+    <tbody>
+        <% for char in @personagens %>
+        <tr>
+            <td> <%= char.nome %> </td>
+            <% if current_user.admin? %>
+                <td><%= link_to "Remover Personagem", remove_personagem_path(:char => char.id, :jogo=>@jogo), method: :post %></td>
+            <% end %>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<% if current_user.admin? %>
+    <%= form_tag(adiciona_personagem_path(:jogo=>@jogo), method: :post) do %>
+        <%= text_field_tag(:nome) %>
+        <%= submit_tag("Adiconar Personagem") %>
+    <% end %>
+<% end %>
