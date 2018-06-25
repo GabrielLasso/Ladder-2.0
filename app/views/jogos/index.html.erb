@@ -1,13 +1,21 @@
-<h1>Jogos</h1>
 <table>
-    <% @jogos.each do |jogo| %>
-    <tr>
-        <td><%=jogo.nome %></td>
-        <td><%= link_to "Personagens", lista_personagens_path(:jogo => jogo.id) %></td>
-        <td><%= link_to "Histórico", historico_game_path(jogo.id) %></td>
-        <td><%= link_to "Remover Jogo", remove_jogo_path(:jogo => jogo.id), method: :post %></td>
-    </tr>
-    <% end %>
+	<thead>
+		<tr>
+			<th>
+				Jogos
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+	    <% @jogos.each do |jogo| %>
+		    <tr>
+		        <td><%=jogo.nome %></td>
+		        <td><%= link_to "Personagens", lista_personagens_path(:jogo => jogo.id) %></td>
+		        <td><%= link_to "Histórico", historico_game_path(jogo.id) %></td>
+		        <td><%= link_to "Remover Jogo", remove_jogo_path(:jogo => jogo.id), method: :post %></td>
+		    </tr>
+	    <% end %>
+	</tbody>
 </table>
 
 <% if current_user.admin? %>
