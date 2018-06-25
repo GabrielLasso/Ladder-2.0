@@ -1,5 +1,3 @@
-<p>Olá <%= current_user %>!</p>
-
 <table>
     <thead>
         <tr>
@@ -18,24 +16,28 @@
     </tbody>
 </table>
 <h2>Mains</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Jogo</th>
-            <th>Main</th>
-        </tr>
-    </thead>
+<div >
+    <% for jogo in @jogos %>
+            <% mains = @mains.where("jogo_id = ?", jogo.id) %>
+            <% if mains.size > 0%>
+                <table>
+                    <thead>
+                        <th><%= jogo.nome%></th>    
+                    </thead>
+                    <tbody>
+                        <% for personagem in mains %>
+                            <tr>
+                                <td><%= personagem.nome %></td>
+                            </tr>
+                        <%end%>
+                    </tbody>
+                </table>
+            <%end%>
+        <br>
+    <% end %>
+</div>
 
-    <tbody>
-        <% for m in current_user.mains %>
-        <tr>
-            <td><%= Jogo.where("id = #{m.jogo_id}")[0] %></td>
-            <td><%= m %></td>
-        </tr>
-        <% end %>
-    </tbody>
-</table>
 
-
-<%= link_to "Editar", mains_path %>
+<br>
+<%= link_to "Adicionar Mains", mains_path %>
 
