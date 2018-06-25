@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/mains" => "mains#index", as: 'mains' 
   post "/mains" => "mains#add_main", as: 'add_main'
   get "/usuarios" => "users#list_users", as: 'listar_usuarios'
+  get "/usuarios/:id" => "users#profile", as: 'profile'
   post "/usuario/add" => "users#add_admin", as: 'add_admin'
   post "/usuario/remove" => "users#remove_admin", as: 'remove_admin'
   post "/punicao" => "users#aplica_punicao", as: 'pune_jogador'

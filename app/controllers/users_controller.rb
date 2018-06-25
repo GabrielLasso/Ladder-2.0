@@ -27,4 +27,7 @@ class UsersController < ApplicationController
         usuario.update_elo(jogo.id, elo)
         redirect_to listar_usuarios_path
     end
+    def profile
+        @user = User.find params[:id]
+    end
 end

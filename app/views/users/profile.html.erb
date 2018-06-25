@@ -1,4 +1,6 @@
-<p>Olá <%= current_user %>!</p>
+
+<h1><%= @user %></h1>
+<br>
 
 <table>
     <thead>
@@ -12,7 +14,7 @@
         <% for j in Jogo.all %>
         <tr>
             <td><%=j %></td>
-            <td><%= current_user.elo(j.id) %></td>
+            <td><%= @user.elo(j.id) %></td>
         </tr>
         <% end %>
     </tbody>
@@ -27,7 +29,7 @@
     </thead>
 
     <tbody>
-        <% for m in current_user.mains %>
+        <% for m in @user.mains %>
         <tr>
             <td><%= Jogo.where("id = #{m.jogo_id}")[0] %></td>
             <td><%= m %></td>
@@ -35,7 +37,4 @@
         <% end %>
     </tbody>
 </table>
-
-
-<%= link_to "Editar", mains_path %>
 

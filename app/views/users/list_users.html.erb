@@ -52,7 +52,7 @@
 		<% @usuarios.each do |usuario| %>
 			<tr>
 				<td>					
-					<%= usuario.username %>
+					<%= link_to usuario.username, profile_path(usuario.id) %>
 				</td>
 				<td>
 					<%= usuario.admin %>

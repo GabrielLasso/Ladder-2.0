@@ -9,14 +9,11 @@
     </head>
 
     <body{font-family:Verdana, Arial, Helvetica, sans-serif;}>
-        <img src="/logo.png">
+        <a href="/"><%=image_tag ("/logo.png")%></a>
         <div id="divstyle">
             <ul>
                 <li>
                     <%= link_to "Partidas", partidas_path %>
-                </li>
-                <li>
-                    <%= link_to "Mains", mains_path %>
                 </li>
                 <li>
                     <%= link_to "Histórico", historico_user_path %>
@@ -31,8 +28,12 @@
                 <% if user_signed_in? %>
                     <li style="float:right">
                         <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
-                        <br>
+                    </li>
+                    <li style="float:right">
+                        <%= link_to "Nova partida +",new_partida_path%>
+                    </li>
                         <% else %>
+                    <li style="float:right">
                         <div id="divstyle">
                             <%= link_to "Entrar",new_user_session_path %>
                         </div>
