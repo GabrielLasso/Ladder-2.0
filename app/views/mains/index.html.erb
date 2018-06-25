@@ -34,15 +34,16 @@
         var str = "<select name='char_id'>";
         var id = idJogo.options[idJogo.selectedIndex].value;
         switch (id) {
-            <% (1..Jogo.all.size).each {|j| %>
-                    case "<%= j %>":
-                    <% chars = Personagem.where("jogo_id = #{j}") %>
+            <% for j in Jogo.all %>
+                <% i=j.id %>
+                    case "<%= i %>":
+                    <% chars = Personagem.where("jogo_id = #{i}") %>
                     <% for c in chars %>
                     str += "<option value=<%= c.id %>><%= c.nome %></option>"
                     <% end %>
                     str += "</select>";
                 break;
-                <% } %>
+                <% end %>
         }
         document.getElementById("chars").innerHTML = str; 
     }
