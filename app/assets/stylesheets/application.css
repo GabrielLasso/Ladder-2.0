@@ -15,15 +15,69 @@
  */
 
 .left-sidebar {
-    height: 500px;
     width: 150px;
     position: fixed;
     top:0;
     left:0;
     padding-top: 20px;
+    border-right:4px solid #B30000;
 }
 
 body{
     margin-left: 150px;
     padding: 0px 10px;
 }
+h1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	margin:0;
+	padding:0;
+	}
+
+hr {
+	border:none;
+	border-top:1px solid #CCCCCC;
+	height:1px;
+	margin-bottom:25px;
+	}
+
+#divstyle{
+	color:#B30000;
+	position:relative;
+	display:block;
+	height:39px;
+	font-size:11px;
+	font-weight:bold;
+	background:transparent url(images/bg_off.gif) repeat-x top left;
+	font-family:Arial,Verdana,Helvitica,sans-serif;
+	border-top:4px solid #B30000;
+	}
+
+#divstyle ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:auto;
+	}
+
+#divstyle ul li{
+	display:block;
+	float:left;
+	margin:0;
+	}
+
+#divstyle ul li a{
+	display:block;
+	float:left;
+	color:#666;
+	text-decoration:none;
+	padding:11px 20px 0 20px;
+	height:23px;
+	background:transparent url(images/divisor.gif) no-repeat top right;
+	}
+
+#divstyle ul li a:hover,#divstyle ul li a.current{
+	color:#B30000;
+	background:#fff url(images/bg_on.gif) no-repeat top right;
+	}
