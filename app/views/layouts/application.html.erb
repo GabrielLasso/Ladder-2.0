@@ -65,12 +65,13 @@
     function printRanks() {
         var str="<table><tbody>";
         switch (aux.options[aux.selectedIndex].value) {
-            <% (1..Jogo.all.size).each {|i| %>
+            <% for j in Jogo.all %>
+                <% i = j.id %>
                 case "<%= i %>":
                     str += "<% @users = User.all.sort_by {|x| -x.elo(i)} %>";
                     str += "<% @users.each do |u| %><tr><td> <%= u.username%></td><td> <%=u.elo(i)%> </td></tr><% end %>";
                     break;
-            <% } %>
+            <% end %>
             str += "</tbody><table>";
         }
         console.log(str);
