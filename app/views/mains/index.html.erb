@@ -15,16 +15,18 @@
         <% end %>
     </tbody>
 </table>
+<br>
 <h2>Novo Main</h2>
 <%= form_for :add_main do |f| %>
-    <select id = "jogo_main" onchange = "obterCharJogo()">
+    <select id = "jogo_main" onchange = "obterCharJogo()" style="display: inline-block;">
         <% @jogos.each do |j| %>
         <option value = <%= j.id %> > <%=j.nome %> </option>
         <% end %>
     </select>
-    <div id='chars'> </div>
+    <div id='chars' style="display: inline-block;"> </div>
     <%= submit_tag "Adicionar Main" %>
 <% end %>
+
 <script>
     obterCharJogo()
     function obterCharJogo() {

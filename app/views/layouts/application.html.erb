@@ -9,7 +9,7 @@
     </head>
 
     <body{font-family:Verdana, Arial, Helvetica, sans-serif;}>
-            <img src="/logo.png">
+        <img src="/logo.png">
         <div id="divstyle">
             <ul>
                 <li>
@@ -28,24 +28,25 @@
                     <%= link_to "Usuarios", listar_usuarios_path %>
                 </li>
 
+                <% if user_signed_in? %>
+                    <li style="float:right">
+                        <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
+                        <br>
+                        <% else %>
+                        <div id="divstyle">
+                            <%= link_to "Entrar",new_user_session_path %>
+                        </div>
+                    </li>
+                <% end %>
             </ul>
         </div>
         <p style = "color:#B30000; font-weight:bold;" class="notice"><%= notice %></p>
         <p style = "color:#B30000; font-weight:bold;" class="alert"><%= alert %></p>
 
-        <% if user_signed_in? %>
-        <p> Olá <%=current_user.username %></p>
-        <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
-        <br>
-        <% else %>
-        <div id="divstyle">
-            <%= link_to "Entrar",new_user_session_path %>
-        </div>
-        <% end %>
         <div class="left-sidebar">
             <h3>Ranking</h3>
             <% @jogos = Jogo.all%>
-            <select name="jogo" id="jogo" onchange="printRanks()">            
+            <select name="jogo" id="jogo" onchange="printRanks()" style="width: 65%; font-size: 130%">         
 
                 <% @jogos.each do |u| %>
                 <option value= <%=u.id%> > <%= u.nome%> </option>
@@ -59,17 +60,19 @@
 </html>
 <script type="text/javascript">
     var aux = document.getElementById("jogo");
-printRanks();
-function printRanks() {
-    var str="";
-    switch (aux.options[aux.selectedIndex].value) {
-        <% (1..Jogo.all.size).each {|i| %>
+    printRanks();
+    function printRanks() {
+        var str="<table><tbody>";
+        switch (aux.options[aux.selectedIndex].value) {
+            <% (1..Jogo.all.size).each {|i| %>
                 case "<%= i %>":
-            str = "<% @users = User.all.sort_by {|x| -x.elo(i)} %>"
-            str += "<% @users.each do |u| %><p> <%= u.username%> <%=u.elo(i)%> </p><% end %>"
-            break;
+                    str += "<% @users = User.all.sort_by {|x| -x.elo(i)} %>";
+                    str += "<% @users.each do |u| %><tr><td> <%= u.username%></td><td> <%=u.elo(i)%> </td></tr><% end %>";
+                    break;
             <% } %>
+            str += "</tbody><table>";
+        }
+        console.log(str);
+        document.getElementById("teste").innerHTML =  str;
     }
-    document.getElementById("teste").innerHTML =  str;
-}
 </script>
