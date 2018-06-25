@@ -9,26 +9,38 @@
     </head>
 
     <body{font-family:Verdana, Arial, Helvetica, sans-serif;}>
-	<img src="/logo.png">
-	<div id="menucase">
-	  
-	</div>
+            <img src="/logo.png">
+        <div id="divstyle">
+            <ul>
+                <li>
+                    <%= link_to "Partidas", partidas_path %>
+                </li>
+                <li>
+                    <%= link_to "Mains", mains_path %>
+                </li>
+                <li>
+                    <%= link_to "Histórico", historico_user_path %>
+                </li>
+                <li>
+                    <%= link_to "Jogos", listar_jogos_path %>
+                </li>
+                <li>
+                    <%= link_to "Usuarios", listar_usuarios_path %>
+                </li>
+
+            </ul>
+        </div>
         <p style = "color:#B30000; font-weight:bold;" class="notice"><%= notice %></p>
         <p style = "color:#B30000; font-weight:bold;" class="alert"><%= alert %></p>
 
         <% if user_signed_in? %>
-	    <div id="divstyle">
-        		<p> Olá <%=current_user.username %></p>
-	    </div>
-            <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
-            <br>
-            <%= link_to 'Menu Inicial', root_path %>
-            <br>
-            <br>
+        <p> Olá <%=current_user.username %></p>
+        <%= link_to "Sair",destroy_user_session_path, :method => :delete %>
+        <br>
         <% else %>
-	    <div id="divstyle">
-	            <%= link_to "Entrar",new_user_session_path %>
-	    </div>
+        <div id="divstyle">
+            <%= link_to "Entrar",new_user_session_path %>
+        </div>
         <% end %>
         <div class="left-sidebar">
             <h3>Ranking</h3>
