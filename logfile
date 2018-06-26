@@ -1,0 +1,24 @@
+LOG:  database system was shut down at 2018-06-26 15:30:01 -03
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+HINT:  Use the same encoding as in the template database, or use template0 as template.
+STATEMENT:  CREATE DATABASE "my_database_development" ENCODING = 'utf8'
+FATAL:  database "my_database_development" does not exist
+FATAL:  database "my_database_development" does not exist
+ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+HINT:  Use the same encoding as in the template database, or use template0 as template.
+STATEMENT:  CREATE DATABASE "my_database_development" ENCODING = 'utf8'
+FATAL:  database "glasso" does not exist
+FATAL:  database "/home/glasso/.postgres/" does not exist
+FATAL:  database "/home/glasso/.postgres/base/1/1" does not exist
+FATAL:  database "/home/glasso/.postgres/base/1/112" does not exist
+ERROR:  role "glasso" already exists
+STATEMENT:  CREATE ROLE glasso NOSUPERUSER NOCREATEDB NOCREATEROLE INHERIT LOGIN;
+ERROR:  new encoding (UTF8) is incompatible with the encoding of the template database (SQL_ASCII)
+HINT:  Use the same encoding as in the template database, or use template0 as template.
+STATEMENT:  CREATE DATABASE "my_database_development" ENCODING = 'utf8'
+FATAL:  database "glasso" does not exist
+ERROR:  cannot drop the currently open database
+STATEMENT:  DROP DATABASE template1;
