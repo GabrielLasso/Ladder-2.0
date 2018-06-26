@@ -6,8 +6,8 @@ class User < ApplicationRecord
     validates_uniqueness_of :username
     after_create :start_elo
     has_and_belongs_to_many :personagem
-    def initialize(param)
-        super(param)
+    def initialize(*param)
+        super(*param)
         self.admin = false
     end
     
