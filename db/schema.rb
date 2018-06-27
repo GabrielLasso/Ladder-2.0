@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20180607214353) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "elos", force: :cascade do |t|
     t.integer "elo"
     t.integer "user_id"
@@ -44,8 +47,8 @@ ActiveRecord::Schema.define(version: 20180607214353) do
   end
 
   create_table "personagems_users", id: false, force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "personagem_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "personagem_id", null: false
   end
 
   create_table "users", force: :cascade do |t|

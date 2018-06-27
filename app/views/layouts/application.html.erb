@@ -5,7 +5,6 @@
         <%= csrf_meta_tags %>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     </head>
 
     <body{font-family:Verdana, Arial, Helvetica, sans-serif;}>
@@ -51,8 +50,7 @@
         <div class="left-sidebar">
             <h3>Ranking</h3>
             <% @jogos = Jogo.all%>
-            <select name="jogo" id="jogo" onchange="printRanks()" style="width: 65%; font-size: 130%">         
-
+            <select name="jogo" id="jogo" onchange="printRanks()" style="">
                 <% @jogos.each do |u| %>
                 <option value= <%=u.id%> > <%= u.nome%> </option>
                 <% end %>
